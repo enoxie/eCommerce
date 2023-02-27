@@ -1,21 +1,24 @@
-/* Imported utils Begin*/
+/*! Imported utils Begin*/
 @import url("utils.css");
 @import url("icons.css");
-/* Imported utils End*/
+/*! Imported utils End*/
 
-/* Imported font family Begin*/
+/*! Imported font family Begin*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @font-face {
   font-family: Inter;
-  src: url(fonts/Inter-Medium.ttf);
+  src: url(../fonts/Inter/Inter-Medium.ttf);
 }
 
 @font-face {
   font-family: Mars;
-  src: url(fonts/Mars.otf);
+  src: url(../fonts/Mars/Mars.otf);
 }
-/* Imported font family End*/
 
-/* General Settings Begin */
+/*! Imported font family End*/
+
+/*? General Settings Begin */
 
 * {
   box-sizing: border-box;
@@ -24,20 +27,23 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", "Helvetica Neue", Helvetica, Arial;
+  font-family: "Poppins", "Inter", Helvetica, Arial;
 }
-/* General Settings End */
+
+/*? General Settings End */
 h1 {
   margin: 0;
 }
 
-/* Topbar Begin*/
+/*? Topbar Begin*/
 
 .topbar {
   display: block;
   background-color: #303030;
   height: 40px;
+  font-size: 15px;
 }
+
 .items {
   display: flex;
   height: 100%;
@@ -46,80 +52,139 @@ h1 {
   margin-right: 7rem;
   text-transform: uppercase;
 }
+
 .topbar .items a {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 500;
   text-decoration: none;
-  color: #aaa;
+  color: #777777;
   margin-right: 1rem;
 }
 
 .topbar .items a:hover {
   color: #c71932;
+  transition: 0.5s all ease-out;
 }
 
-/* Topbar End*/
+/*? Topbar End*/
 
-/* Header Begin*/
+/*? Header Begin*/
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0 2rem 0;
-  box-shadow: 0 0px 8px rgb(0 0 0 / 30%);
+  height: 114px;
   background-color: #fff;
   opacity: 0;
   animation: details-anim 1s forwards ease-in-out;
+  position: relative;
+  z-index: 2;
 }
 
-header {
-  position: sticky;
+.header-sticky {
+  width: 100%;
+  position: fixed;
+  height: 90px;
   top: 0;
-  z-index: 999;
+  z-index: 3;
+  box-shadow: 0 0px 8px rgb(0 0 0 / 30%);
 }
 
-.stuck {
-  transition: opacity 1s linear;
-  opacity: 1;
-}
+/*? Header End*/
 
-/* Header End*/
-
-/* Menu Begin  */
+/*? Menu Begin  */
 .header-menu {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: flex-start;
-  margin: 0 7rem 0 7rem;
+  width: 100%;
+  padding-right: 110px;
+  padding-left: 110px;
+  margin-right: auto;
+  margin-left: auto;
 }
-.header-menu ul {
+
+.header-menu > ul {
   padding: 0;
-  display: flex;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-menu > ul > li {
   list-style: none;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
-.header-menu li {
-  margin-right: 3rem;
+.header-menu > ul > li:hover > a {
+  color: #c71932 !important;
+  transition: 0.5s all ease-out;
 }
 
-.header-menu ul li a.active {
+.header-menu > ul > li > a.active {
   color: #c71932 !important;
 }
-.header-menu a {
-  font-size: 0.8rem;
-  text-decoration: none;
+
+.header-menu > ul > li > a {
   color: #303030;
-  font-weight: 700;
+  width: 100%;
+  font-size: 0.9333333333333333em;
+  text-decoration: none;
+  font-weight: 600;
   text-transform: uppercase;
+  padding: 0 24px;
 }
 
-.header-menu a:hover {
+.header-menu > ul > li:first-child > a {
+  padding-left: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 270px;
+  height: auto;
+  background-color: #fff;
+  z-index: 3;
+  box-shadow: 0 9px 32px rgb(19 18 21 / 11%);
+  display: none;
+}
+.dropdown-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dropdown-menu > ul > li {
+  text-align: left;
+  padding: 1rem 0 1rem 0;
+}
+
+.dropdown-menu > ul > li:hover > a {
   color: #c71932;
 }
 
-/* Menu End */
+.dropdown-menu > ul > li > a {
+  color: #777777;
+  text-decoration: none;
+  padding-left: 1.5rem;
+}
 
-/* Logo Begin */
+/*? Menu End */
+
+/*? Logo Begin */
 .header-logo {
   display: flex;
   flex: 1;
@@ -133,7 +198,7 @@ header {
 
 /* Logo End  */
 
-/* Options Begind*/
+/* Options Begin*/
 
 .header-options {
   display: flex;
@@ -146,15 +211,15 @@ header {
 .header-options .search,
 .account {
   height: 33px;
-  width: 30px;
-  margin-right: 1rem;
+  width: 40px;
+  margin-right: 0.5rem;
 }
 
 .header-options .cart {
   display: inline-flex;
   position: relative;
-  height: 2rem;
-  width: 2.5rem;
+  height: 33px;
+  width: 40px;
 }
 
 .header-options button,
@@ -166,8 +231,8 @@ header {
   background-color: transparent;
 }
 
-.header-options button i,
-span {
+.header-options button > i,
+.header-options span > i {
   font-size: 2rem;
 }
 
@@ -179,7 +244,7 @@ span {
   text-align: center;
   color: #eee;
   font-size: 0.9rem;
-  padding: 0.2rem;
+  padding: 0.1rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -188,11 +253,19 @@ span {
 .header-options button:hover,
 .header-options span:first-child:hover {
   color: #c71932;
+  transition: 0.5s all ease-out;
 }
 
+/*? Options End */
+
+/*? Slider Begin */
 .slider-container {
   height: 84.1vh;
-  margin: 0 7rem 0 7rem;
+  width: 100%;
+  padding-right: 110px;
+  padding-left: 110px;
+  margin-right: auto;
+  margin-left: auto;
   z-index: 1;
 }
 
@@ -273,6 +346,7 @@ swiper-slide img {
 .details h1:nth-child(1) {
   text-align: left;
 }
+
 .side-info {
   position: absolute;
   top: 10rem;
@@ -280,11 +354,14 @@ swiper-slide img {
   writing-mode: vertical-rl;
   word-spacing: 0.1rem;
   letter-spacing: 0.2rem;
-  transform: translateX(-122%);
-  animation: white-box 1s forwards ease-in-out;
+  transform: rotate(-180deg);
+  /* transform: translateX(-122%); */
+  animation: side-info-anim 1s forwards ease-in-out;
   animation-delay: 0.2s;
   z-index: 3;
+  opacity: 0;
 }
+
 .side-info span {
   font-size: 1rem;
   color: rgba(108, 117, 125);
@@ -299,11 +376,10 @@ swiper-slide img {
   left: 0;
   transform: translateX(-100%);
   animation: white-box 1s forwards ease-in-out;
-
   z-index: 2;
 }
 
-/* Animations */
+/*? Animations */
 @keyframes white-box {
   to {
     transform: translateX(-14.5%);
@@ -312,9 +388,10 @@ swiper-slide img {
 
 @keyframes side-info-anim {
   to {
-    transform: translateX(0);
+    opacity: 1;
   }
 }
+
 @keyframes details-anim {
   to {
     opacity: 1;
@@ -335,29 +412,46 @@ swiper-slide img {
     transform: translateY(0);
   }
 }
+
 @keyframes header-anim {
   to {
     opacity: 1;
   }
 }
+/*? Animations End */
+/*? Slider End */
 
+/*? Collections Begin */
 .collections {
-  background-color: #aaa;
-  height: 70%;
-  margin: 2rem 7rem 0 7rem;
-}
-.collections .item {
-  height: 100%;
-  width: 55%;
-}
-
-.collections .item a {
-  height: 523px;
-  width: 33%;
-}
-
-.collections .item img {
-  height: 100%;
+  display: flex;
   width: 100%;
+  height: 100%;
+  padding-top: 2rem;
+  padding-right: 110px;
+  padding-left: 110px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.row .collection > a > img,
+.row .col-2 .collection > a > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
+
+.row .col-2 {
+  display: flex;
+  flex: 1;
+  gap: 30px;
+}
+/*? Collections End */
