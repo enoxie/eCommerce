@@ -31,7 +31,12 @@ body {
 }
 
 /*? General Settings End */
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -40,16 +45,16 @@ h1 {
 .topbar {
   display: block;
   background-color: #303030;
-  height: 40px;
-  font-size: 15px;
+  height: 2.5rem;
+  font-size: 0.9375rem;
 }
 
-.items {
+.topbar .items {
   display: flex;
   height: 100%;
   align-items: center;
   justify-content: flex-end;
-  margin-right: 7rem;
+  margin-right: 6rem;
   text-transform: uppercase;
 }
 
@@ -57,7 +62,7 @@ h1 {
   font-size: 0.75rem;
   font-weight: 500;
   text-decoration: none;
-  color: #777777;
+  color: #aaa;
   margin-right: 1rem;
 }
 
@@ -73,7 +78,7 @@ h1 {
 .header {
   display: flex;
   justify-content: space-between;
-  height: 114px;
+  height: 7.125rem;
   background-color: #fff;
   opacity: 0;
   animation: details-anim 1s forwards ease-in-out;
@@ -84,23 +89,45 @@ h1 {
 .header-sticky {
   width: 100%;
   position: fixed;
-  height: 90px;
+  height: 5.625rem;
   top: 0;
   z-index: 3;
-  box-shadow: 0 0px 8px rgb(0 0 0 / 30%);
+  box-shadow: 0 0rem 0.5rem rgb(0 0 0 / 30%);
 }
 
 /*? Header End*/
 
-/*? Menu Begin  */
+/*? Header Begin*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 7.125rem;
+  background-color: #fff;
+  opacity: 0;
+  animation: details-anim 1s forwards ease-in-out;
+  position: relative;
+  z-index: 2;
+}
+
+.header-sticky {
+  width: 100%;
+  position: fixed;
+  height: 5.625rem;
+  top: 0;
+  z-index: 3;
+  box-shadow: 0 0rem 0.5rem rgb(0 0 0 / 30%);
+}
+
+/** Menu Begin  */
 .header-menu {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  padding-right: 110px;
-  padding-left: 110px;
+  padding-right: 6.875rem;
+  padding-left: 6.875rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -140,7 +167,7 @@ h1 {
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 0 24px;
+  padding: 0 1.5rem;
 }
 
 .header-menu > ul > li:first-child > a {
@@ -151,40 +178,40 @@ h1 {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 270px;
+  width: 16.875rem;
   height: auto;
   background-color: #fff;
   z-index: 3;
-  box-shadow: 0 9px 32px rgb(19 18 21 / 11%);
+  box-shadow: 0 0.5625rem 2rem rgb(19 18 21 / 11%);
   display: none;
 }
-.dropdown-item:hover .dropdown-menu {
+.header-menu > ul > .dropdown-item:hover .dropdown-menu {
   display: block;
 }
 
-.dropdown-menu > ul {
+.header-menu > ul > li > .dropdown-menu > ul {
   list-style-type: none;
   padding: 0;
 }
 
-.dropdown-menu > ul > li {
+.header-menu > ul > li > .dropdown-menu > ul > li {
   text-align: left;
   padding: 1rem 0 1rem 0;
 }
 
-.dropdown-menu > ul > li:hover > a {
+.header-menu > ul > li > .dropdown-menu > ul > li:hover > a {
   color: #c71932;
 }
 
-.dropdown-menu > ul > li > a {
+.header-menu > ul > li > .dropdown-menu > ul > li > a {
   color: #777777;
   text-decoration: none;
   padding-left: 1.5rem;
 }
 
-/*? Menu End */
+/** Menu End */
 
-/*? Logo Begin */
+/** Logo Begin */
 .header-logo {
   display: flex;
   flex: 1;
@@ -194,11 +221,14 @@ h1 {
 
 .header-logo .title {
   font-family: "Mars", "Inter";
+  font-size: 2rem;
+  text-decoration: none;
+  color: #303030;
 }
 
-/* Logo End  */
+/** Logo End  */
 
-/* Options Begin*/
+/** Options Begin*/
 
 .header-options {
   display: flex;
@@ -210,16 +240,16 @@ h1 {
 
 .header-options .search,
 .account {
-  height: 33px;
-  width: 40px;
+  height: 2.0625rem;
+  width: 2.5rem;
   margin-right: 0.5rem;
 }
 
 .header-options .cart {
   display: inline-flex;
   position: relative;
-  height: 33px;
-  width: 40px;
+  height: 2.0625rem;
+  width: 2.5rem;
 }
 
 .header-options button,
@@ -236,7 +266,7 @@ h1 {
   font-size: 2rem;
 }
 
-.header-options .sp-badge-cart {
+.header-options .cart .sp-badge-cart {
   height: 1.3rem;
   width: 1.3rem;
   background-color: #303030;
@@ -251,47 +281,50 @@ h1 {
 }
 
 .header-options button:hover,
-.header-options span:first-child:hover {
+.header-options .cart:hover {
   color: #c71932;
   transition: 0.5s all ease-out;
 }
 
-/*? Options End */
+/** Options End */
+/*? Header End */
 
 /*? Slider Begin */
+/*todo adjust slider background color dynamic and play animation when click on dots */
+
 .slider-container {
   height: 84.1vh;
   width: 100%;
-  padding-right: 110px;
-  padding-left: 110px;
+  padding-right: 6.875rem;
+  padding-left: 6.875rem;
   margin-right: auto;
   margin-left: auto;
   z-index: 1;
 }
 
-swiper-container {
+.slider-container swiper-container {
   width: 100%;
   height: 100%;
 }
 
-swiper-slide {
+.slider-container swiper-container swiper-slide {
   position: relative;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-swiper-slide img {
+.slider-container swiper-container swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.details {
+.slider-container swiper-container swiper-slide .details {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -302,32 +335,32 @@ swiper-slide img {
   z-index: 3;
 }
 
-.details h1 {
+.slider-container swiper-container swiper-slide .details h1 {
   font-weight: 100;
   writing-mode: sideways-rl;
-  width: 350px;
+  width: 21.875rem;
   opacity: 0;
   transform: translateX(15%);
   animation: details-anim 1s forwards ease-in-out;
 }
 
-.details span {
+.slider-container swiper-container swiper-slide .details span {
   margin-top: 0.5rem;
   font-size: 1.2rem;
-  padding-left: 5px;
+  padding-left: 0.3125rem;
   color: rgb(108, 117, 125);
   opacity: 0;
   transform: translateY(100%);
   animation: details-anim 1s forwards ease-in-out;
 }
 
-.details a {
+.slider-container swiper-container swiper-slide .details a {
   text-align: center;
   margin-top: 3rem;
   text-decoration: none;
   color: #303030;
-  border: 1px solid #303030;
-  width: 150px;
+  border: 0.0625rem solid #303030;
+  width: 9.375rem;
   padding: 1rem;
   margin-left: 0.4rem;
   float: right;
@@ -337,50 +370,49 @@ swiper-slide img {
   animation-delay: 0.3s;
 }
 
-.details a:hover {
+.slider-container swiper-container swiper-slide .details a:hover {
   transition: all 0.3s linear;
   background-color: #000000;
   color: #aaa;
 }
 
-.details h1:nth-child(1) {
+.slider-container swiper-container swiper-slide .details h1:nth-child(1) {
   text-align: left;
 }
 
-.side-info {
+.slider-container swiper-container swiper-slide .side-info {
   position: absolute;
-  top: 10rem;
+  top: 6rem;
   left: 0.5rem;
   writing-mode: vertical-rl;
   word-spacing: 0.1rem;
   letter-spacing: 0.2rem;
   transform: rotate(-180deg);
-  /* transform: translateX(-122%); */
   animation: side-info-anim 1s forwards ease-in-out;
   animation-delay: 0.2s;
   z-index: 3;
   opacity: 0;
 }
 
-.side-info span {
+.slider-container swiper-container swiper-slide .side-info span {
   font-size: 1rem;
   color: rgba(108, 117, 125);
   font-weight: 700;
 }
 
-.white {
+.slider-container swiper-container swiper-slide .white-box {
   position: absolute;
   background-color: #fff;
   width: 60%;
   height: 84.1vh;
   left: 0;
   transform: translateX(-100%);
-  animation: white-box 1s forwards ease-in-out;
+  animation: white-box-anim 1s forwards ease-in-out;
   z-index: 2;
 }
 
-/*? Animations */
-@keyframes white-box {
+/** Slider Animations */
+@keyframes white-box-anim {
   to {
     transform: translateX(-14.5%);
   }
@@ -418,7 +450,7 @@ swiper-slide img {
     opacity: 1;
   }
 }
-/*? Animations End */
+/** Slider Animations End */
 /*? Slider End */
 
 /*? Collections Begin */
@@ -427,42 +459,40 @@ swiper-slide img {
   width: 100%;
   height: 100%;
   padding-top: 2rem;
-  padding-right: 110px;
-  padding-left: 110px;
+  padding-right: 6.875rem;
+  padding-left: 6.875rem;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 60px;
-  gap: 30px;
+  margin-bottom: 3.75rem;
+  gap: 1.875rem;
 }
 
 .collections .row {
   display: flex;
   flex: 1;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
-.collections .row .col-1 .collection > a,
-.collections .row .col-2 .collection > a,
-.collections .row .col-1 .collection > a > img,
-.collections .row .col-2 .collection > a > img {
+.collections .row .col-1 .collection a,
+.collections .row .col-2 .collection a,
+.collections .row .col-1 .collection a img,
+.collections .row .col-2 .collection a img {
   display: flex;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.collections .row .col-1 {
-  position: relative;
-  overflow: hidden;
-}
+
 .collections .row .col-2 {
   display: flex;
-  position: relative;
-  overflow: hidden;
   flex: 1;
-  gap: 30px;
+  gap: 1.875rem;
 }
 
+.collections .row .collection:hover .overlay-effect {
+  opacity: 1;
+}
 .overlay-effect {
   position: absolute;
   left: 0;
@@ -474,7 +504,12 @@ swiper-slide img {
   background-color: rgba(48, 48, 48, 0.5);
 }
 /** Collection-1 CSS Style Begin */
-.collections .row .col-1 .collection a .description {
+
+.collections .row .col-1 .collection {
+  position: relative;
+  overflow: hidden;
+}
+.collections .row .col-1:first-child .collection a .description {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -489,63 +524,71 @@ swiper-slide img {
   transition: transform 1s ease;
 }
 
-.collections .row .col-1 .collection a .description > h1 {
+.collections .row .col-1:first-child .collection a .description h1 {
   position: absolute;
   font-size: 30rem;
   color: #d27700;
   opacity: 0.8;
   line-height: 0.8;
-  letter-spacing: -0.08em;
   font-weight: 700;
 }
-.collections .row .col-1 .collection a .description > span {
+.collections .row .col-1:first-child .collection a .description span {
   position: absolute;
   font-size: 3.3333333333333335em;
   font-weight: 600;
   color: #fff;
-  padding-left: 5.4rem;
+  padding-left: 4rem;
   opacity: 0.8;
 }
-.collections .row .col-1 .collection > a:hover .description > h1 {
-  transform: translateY(92%);
-  font-size: 15rem;
+.collections .row .col-1:first-child .collection a:hover .description h1 {
+  transform: translateY(126%);
+  font-size: 17.5rem;
   transition: all 1s ease;
 }
 
-.collections .row .col-1 .collection > a:hover .description > span {
-  transform: translateY(310%);
+.collections .row .col-1:first-child .collection a:hover .description span {
+  transform: translateY(460%);
 
   transition: transform 1s ease;
 }
-.collections .row .col-1 .collection > a:hover .description > img {
+.collections .row .col-1:first-child .collection a:hover img {
   transform: scale(1.1);
-
   transition: transform 1s ease;
 }
-.collections .row .col-1 .collection > a:not(:hover) .description > h1 {
+.collections .row .col-1:first-child .collection a:not(:hover) .description h1 {
   transform: translateY(0);
   font-size: 30rem;
   transition: all 1s ease;
 }
-.collections .row .col-1 .collection > a:not(:hover) .description > span {
+.collections
+  .row
+  .col-1:first-child
+  .collection
+  a:not(:hover)
+  .description
+  span {
   transform: translateY(0);
   transition: all 1s ease;
 }
-.collections .row .col-1 .collection > a:not(:hover) .description > img {
+.collections .row .col-1:first-child .collection a:not(:hover) img {
   transform: scale(1);
   transition: all 1s ease;
 }
-.collections .row .col-1 .collection > a:hover > .overlay-effect {
-  opacity: 1;
-}
+
 /** Collection-1 CSS Style End */
 
 /** Collection-2 CSS Style Begin */
+
+.collections .row .col-2 .collection {
+  position: relative;
+  overflow: hidden;
+}
 
 .collections .row .col-2 .collection a .description {
   position: absolute;
   color: #fff;
   padding: 3rem;
+  transform: translateY(5.875rem);
 }
 .collections .row .col-2 .collection a {
   display: flex;
@@ -554,24 +597,119 @@ swiper-slide img {
   justify-content: flex-end;
 }
 
-.collections .row .col-2 .collection > a .description > h1 {
+.collections .row .col-2 .collection a .description h1 {
   font-size: 3.3333333333333335em;
   line-height: 1.1;
   letter-spacing: 0.03em;
   font-weight: 700;
 }
-.collections .row .col-2 .collection > a .description > h2 {
+.collections .row .col-2 .collection a .description h2 {
   text-transform: uppercase;
-  line-height: 1.1;
+  line-height: 0.5;
   letter-spacing: 0.03em;
   font-size: 2em;
   font-weight: 500;
   margin-bottom: 0.6rem;
 }
-.collections .row .col-2 .collection > a .description > button {
+.collections .row .col-2 .collection a .description button {
   position: absolute;
-  display: none;
+  padding: 0.8125rem 1.5625rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  vertical-align: top;
+  position: relative;
+
+  font-size: 0.9333333333333333em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-style: solid;
+  border-color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border-width: 0.125rem 0.125rem 0.125rem 0.125rem;
+  margin-top: 2.5rem !important;
+  line-height: 0.875rem;
+  color: #fff;
 }
+
+.collections .row .col-2 .collection a:hover img {
+  transform: scale(1.1);
+  transition: transform 1s ease;
+}
+
+.collections .row .col-2 .collection a:hover .description {
+  transform: translateY(0);
+  transition: all 1s ease;
+}
+.collections .row .col-2 .collection a:not(hover) .description {
+  transform: translateY(5.875rem);
+  transition: all 1s ease;
+}
+.collections .row .col-2 .collection a:not(:hover) img {
+  transform: scale(1);
+  transition: all 1s ease;
+}
+.collections .row .col-2 .collection a .description button:hover {
+  background-color: #fff;
+  cursor: pointer;
+  color: #303030;
+}
+
 /** Collection-2 CSS Style End */
 
+/** Collection-3 CSS Style Begin*/
+.collections .row .col-1 .collection {
+  position: relative;
+}
+
+.collections .row .col-1 .collection a .description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0rem 0rem 3rem 3rem;
+}
+.collections .row .col-1 .collection a .description h1,
+.collections .row .col-1 .collection a .description h2 {
+  line-height: 1;
+  color: #fff;
+}
+.collections .row .col-1 .collection a .description h1 {
+  font-size: 5.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.collections .row .col-1 .collection a .description h2 {
+  font-size: 1.9333333333333333em;
+  font-weight: 600;
+  line-height: 1;
+  margin-top: 0.125rem;
+}
+.collections .row .col-1 .collection a .description h2::first-letter {
+  text-transform: uppercase;
+}
+
+.collections .row .col-1 .collection a:hover img {
+  transform: scale(1.1);
+  transition: transform 1s ease;
+}
+
+.collections .row .col-1 .collection a:hover .description {
+  transform: translateY(-5.875rem);
+  transition: all 1s ease;
+}
+.collections .row .col-1 .collection a:not(hover) .description {
+  transform: translateY(0);
+  transition: all 1s ease;
+}
+.collections .row .col-1 .collection a:not(:hover) img {
+  transform: scale(1);
+  transition: all 1s ease;
+}
+
+/** Collection-3 CSS Style End*/
 /*? Collections End */
