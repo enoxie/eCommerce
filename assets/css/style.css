@@ -435,23 +435,143 @@ swiper-slide img {
   gap: 30px;
 }
 
-.row {
+.collections .row {
   display: flex;
   flex: 1;
   flex-direction: column;
   gap: 30px;
 }
 
-.row .collection > a > img,
-.row .col-2 .collection > a > img {
+.collections .row .col-1 .collection > a,
+.collections .row .col-2 .collection > a,
+.collections .row .col-1 .collection > a > img,
+.collections .row .col-2 .collection > a > img {
+  display: flex;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.row .col-2 {
+.collections .row .col-1 {
+  position: relative;
+  overflow: hidden;
+}
+.collections .row .col-2 {
   display: flex;
+  position: relative;
+  overflow: hidden;
   flex: 1;
   gap: 30px;
 }
+
+.overlay-effect {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.8s ease;
+  background-color: rgba(48, 48, 48, 0.5);
+}
+/** Collection-1 CSS Style Begin */
+.collections .row .col-1 .collection a .description {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 3rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease;
+}
+
+.collections .row .col-1 .collection a .description > h1 {
+  position: absolute;
+  font-size: 30rem;
+  color: #d27700;
+  opacity: 0.8;
+  line-height: 0.8;
+  letter-spacing: -0.08em;
+  font-weight: 700;
+}
+.collections .row .col-1 .collection a .description > span {
+  position: absolute;
+  font-size: 3.3333333333333335em;
+  font-weight: 600;
+  color: #fff;
+  padding-left: 5.4rem;
+  opacity: 0.8;
+}
+.collections .row .col-1 .collection > a:hover .description > h1 {
+  transform: translateY(92%);
+  font-size: 15rem;
+  transition: all 1s ease;
+}
+
+.collections .row .col-1 .collection > a:hover .description > span {
+  transform: translateY(310%);
+
+  transition: transform 1s ease;
+}
+.collections .row .col-1 .collection > a:hover .description > img {
+  transform: scale(1.1);
+
+  transition: transform 1s ease;
+}
+.collections .row .col-1 .collection > a:not(:hover) .description > h1 {
+  transform: translateY(0);
+  font-size: 30rem;
+  transition: all 1s ease;
+}
+.collections .row .col-1 .collection > a:not(:hover) .description > span {
+  transform: translateY(0);
+  transition: all 1s ease;
+}
+.collections .row .col-1 .collection > a:not(:hover) .description > img {
+  transform: scale(1);
+  transition: all 1s ease;
+}
+.collections .row .col-1 .collection > a:hover > .overlay-effect {
+  opacity: 1;
+}
+/** Collection-1 CSS Style End */
+
+/** Collection-2 CSS Style Begin */
+
+.collections .row .col-2 .collection a .description {
+  position: absolute;
+  color: #fff;
+  padding: 3rem;
+}
+.collections .row .col-2 .collection a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.collections .row .col-2 .collection > a .description > h1 {
+  font-size: 3.3333333333333335em;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+.collections .row .col-2 .collection > a .description > h2 {
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+.collections .row .col-2 .collection > a .description > button {
+  position: absolute;
+  display: none;
+}
+/** Collection-2 CSS Style End */
+
 /*? Collections End */
