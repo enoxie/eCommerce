@@ -18,3 +18,7 @@ function stickyHeader() {
     header.classList.remove("header-sticky");
   }
 }
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});

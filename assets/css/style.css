@@ -463,7 +463,6 @@ h6 {
   padding-left: 6.875rem;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 3.75rem;
   gap: 1.875rem;
 }
 
@@ -713,3 +712,348 @@ h6 {
 
 /** Collection-3 CSS Style End*/
 /*? Collections End */
+
+/*? Products Begin */
+
+.container {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 93px;
+  padding-right: 6.875rem;
+  padding-left: 6.875rem;
+}
+
+.container .product {
+  width: 100%;
+  height: 100%;
+}
+
+.container .product .product-title {
+  display: flex;
+  justify-content: center;
+}
+
+.container .product .product-title h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1.2;
+  padding: 0;
+  color: #303030;
+  font-weight: 700;
+}
+.container .product .product-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.container .product .product-wrapper .product-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .product .product-wrapper .product-navigation {
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  margin-bottom: 1rem;
+}
+
+.container .product .product-wrapper .product-navigation .nav-item {
+  padding: 15px;
+  list-style-type: none;
+}
+
+.container .product .product-wrapper .product-navigation .nav-item a {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #777777;
+  text-decoration: none;
+  position: relative;
+}
+
+.container .product .product-wrapper .product-navigation .nav-item a.active {
+  color: #000000;
+}
+.container
+  .product
+  .product-wrapper
+  .product-navigation
+  .nav-item
+  > a.active::before {
+  width: 50%;
+  left: calc(50%);
+}
+.container
+  .product
+  .product-wrapper
+  .product-navigation
+  .nav-item
+  > a.active::after {
+  width: 50%;
+  right: calc(50%);
+}
+
+.container .product .product-wrapper .product-navigation .nav-item > a:before,
+li.nav-item > a:after {
+  -webkit-transition: all 300ms linear 0ms;
+  -moz-transition: all 300ms linear 0ms;
+  -ms-transition: all 300ms linear 0ms;
+  -o-transition: all 300ms linear 0ms;
+  transition: all 300ms linear 0ms;
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  width: 0;
+  height: 2px;
+  background-color: #303030;
+}
+
+.container .product .product-wrapper .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container .product .product-wrapper .row .col {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex-basis: 20%;
+  padding-bottom: 3rem;
+}
+.container .product .product-wrapper .row .col .product-image {
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.container .product .product-wrapper .row .col .product-image a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.container .product .product-wrapper .row .col .product-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.container .product .product-wrapper .row .col .product-image .btn-wishlist {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  z-index: 2;
+  font-family: "icon-h-37";
+  background: none;
+  font-size: 1.5rem;
+  font-weight: inherit;
+  line-height: 100%;
+  box-shadow: none;
+  -webkit-appearance: none;
+  min-width: 0px;
+  max-width: 60px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  outline: none;
+  display: inline-block;
+  height: auto;
+  overflow: visible;
+  color: #909090;
+  cursor: pointer;
+}
+.container
+  .product
+  .product-wrapper
+  .row
+  .col
+  .product-image
+  .btn-wishlist
+  i:hover {
+  color: #ff4500;
+}
+.container
+  .product
+  .product-wrapper
+  .row
+  .col
+  .product-image
+  .btn-wishlist:hover
+  .product-tooltip {
+  display: flex;
+  box-shadow: 0 0rem 0.5rem rgb(0 0 0 / 30%);
+  animation: anim-tooltip 0.3s;
+}
+.container
+  .product
+  .product-wrapper
+  .row
+  .col
+  .product-image
+  .btn-wishlist
+  .product-tooltip {
+  font-family: "Poppins", "Inter", Helvetica, Arial;
+  font-weight: 300;
+  position: absolute;
+  font-size: 0.7rem;
+  border: 5px solid #303030;
+  background-color: #303030;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 27px;
+  text-align: center;
+  top: -2px;
+  right: 32px;
+  display: none;
+}
+
+.container
+  .product
+  .product-wrapper
+  .row
+  .col
+  .product-image
+  .btn-wishlist
+  .product-tooltip::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0px;
+  right: 0px;
+  top: 50%;
+  border: 5px solid transparent;
+  border-right: 0;
+  border-left: 5px solid #303030;
+  transform: translate(calc(100% + 5px), -50%);
+}
+
+.container .product .product-wrapper .row .col .group-button {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.container .product .product-wrapper .row .col .group-button a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #303030;
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 1.5rem;
+  width: 45px;
+  height: 45px;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.container .product .product-wrapper .row .col .group-button a:hover,
+.container .product .product-wrapper .row .col .group-button button:hover {
+  background-color: #c81d31;
+}
+.container .product .product-wrapper .row .col .group-button button {
+  flex: 2;
+  cursor: pointer;
+  background-color: #303030;
+  line-height: 41px;
+  font-size: 0.9333333333333333em;
+  letter-spacing: 0.075em;
+  padding: 0;
+  font-weight: 400;
+  border: none;
+  width: 45px;
+  height: 45px;
+  margin: 0rem 0.06rem;
+  color: #cccccc;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.container
+  .product
+  .product-wrapper
+  .row
+  .col
+  .product-image:hover
+  .group-button
+  a {
+  transform: translateY(0%);
+  transition: 0.5s all ease;
+  opacity: 1;
+}
+.container
+  .product
+  .product-wrapper
+  .row
+  .col
+  .product-image:not(hover)
+  .group-button
+  a {
+  transform: translateY(100%);
+  transition: 0.5s all ease;
+  opacity: 0;
+}
+.container
+  .product
+  .product-wrapper
+  .row
+  .col
+  .product-image:hover
+  .group-button
+  button {
+  transform: translateY(0%);
+  transition: 0.3s all ease;
+  opacity: 1;
+}
+.container
+  .product
+  .product-wrapper
+  .row
+  .col
+  .product-image:not(hover)
+  .group-button
+  button {
+  transform: translateY(100%);
+  transition: 0.3s all ease;
+  opacity: 0;
+}
+.container .product .product-wrapper .row .col .description .title h5 {
+  color: #909090;
+  font-weight: 500;
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.container .product .product-wrapper .row .col .description .price span {
+  font-size: 1.2em;
+  line-height: 1.44444444444;
+  font-weight: 600;
+  text-align: left;
+  color: #303030;
+}
+
+@keyframes anim-tooltip {
+  from {
+    transform: translateX(-15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/*? Products End */
