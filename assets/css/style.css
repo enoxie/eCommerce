@@ -852,7 +852,6 @@ li.nav-item > a:after {
   font-weight: inherit;
   line-height: 100%;
   box-shadow: none;
-  -webkit-appearance: none;
   min-width: 0px;
   max-width: 60px;
   margin: 0;
