@@ -447,3 +447,40 @@
 .mb-9 {
   margin-bottom: 5rem;
 }
+
+/* Products Badge Location Begin*/
+
+.badge-top-start {
+  top: 21px !important;
+  left: 0 !important;
+}
+
+.badge-top-end {
+  top: 21px !important;
+  right: 0 !important;
+}
+
+.badge-bottom-start {
+  bottom: 21px !important;
+  left: 0 !important;
+}
+.badge-bottom-end {
+  bottom: 21px !important;
+  right: 0 !important;
+}
+
+.badge-center-start {
+  top: 50% !important;
+  left: 0 !important;
+}
+
+.badge-center-end {
+  top: 50% !important;
+  right: 0 !important;
+}
+
+.badge-center {
+  top: 50% !important;
+  left: 35% !important;
+}
+/* Products Badge Location End*/
