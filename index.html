@@ -11,7 +11,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
   </head>
-
   <body>
     <div class="topbar">
       <div class="items">
@@ -65,7 +64,29 @@
         </div>
         <div class="header-options">
           <div class="search">
-            <button><i class="icon-f-85"></i></button>
+            <button id="btn-search"><i class="icon-f-85"></i></button>
+            <div class="dropdown-menu" id="search-dropdown">
+              <div class="container">
+                <div class="search-info">What are you Looking for?</div>
+                <div class="search-box">
+                  <input
+                    class="search-input"
+                    id="search-input"
+                    type="search"
+                    name="q"
+                    value=""
+                    placeholder="Enter key word"
+                    aria-label="SEARCH PRODUCTS..."
+                    autocomplete="off"
+                    autofocus
+                  />
+                  <button type="submit" class="icon-f-85"></button>
+                </div>
+                <div class="search-close">
+                  <button class="icon-f-84" id="btn-search-close"></button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="account">
             <button><i class="icon-f-94"></i></button>
