@@ -12,14 +12,68 @@
     />
   </head>
   <body>
-    <div class="topbar">
-      <div class="items">
-        <a href="#">SİPARİŞ TAKİBİ</a>
-        <a href="#">Hesabım</a>
+    <!-- MODAL DISCOUNT  -->
+    <div class="modal-discount" id="modal-discount">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="modal-close icon-f-84"
+              id="modal-close"
+            ></button>
+          </div>
+
+          <div class="modal-row">
+            <div class="modal-col">
+              <img src="./assets/images/modal/modal.jpg" alt="" />
+            </div>
+            <div class="modal-col">
+              <div class="modal-title">
+                <h3 class="text-01">ŞİMDİ ABONE OL</h3>
+                <h1 class="text-02">Kış koleksiyonunda %20 indirim kazanın</h1>
+                <p class="text-03">
+                  Yeni ürünlerimizden, özel tekliflerimizden, ve en son moda
+                  güncellemelerinden ilk siz haberdar olun!
+                </p>
+              </div>
+
+              <div class="modal-input-group">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="modal-input"
+                  value=""
+                  placeholder="E-postanızı giriniz"
+                  autocorrect="off"
+                  autocapitalize="off"
+                />
+                <button class="btn-modal-subscribe">ABONE OL</button>
+
+                <div class="checkbox-group">
+                  <input type="checkbox" id="modal-checkbox" />
+                  <label for="modal-checkbox">
+                    <span class="check"></span>
+                    <span class="box"></span>
+                    Bu mesajı bir daha gösterme
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- MODAL DISCOUNT  -->
+    <!-- HEADER  -->
     <header>
-      <div class="header" id="head">
+      <div class="topbar" id="topbar">
+        <div class="items">
+          <a href="#">SİPARİŞ TAKİBİ</a>
+          <a href="#">Hesabım</a>
+        </div>
+      </div>
+      <div class="header" id="header">
         <div class="header-menu">
           <ul>
             <li class="dropdown-item">
@@ -65,28 +119,6 @@
         <div class="header-options">
           <div class="search">
             <button id="btn-search"><i class="icon-f-85"></i></button>
-            <div class="dropdown-menu" id="search-dropdown">
-              <div class="container">
-                <div class="search-info">What are you Looking for?</div>
-                <div class="search-box">
-                  <input
-                    class="search-input"
-                    id="search-input"
-                    type="search"
-                    name="q"
-                    value=""
-                    placeholder="Enter key word"
-                    aria-label="SEARCH PRODUCTS..."
-                    autocomplete="off"
-                    autofocus
-                  />
-                  <button type="submit" class="icon-f-85"></button>
-                </div>
-                <div class="search-close">
-                  <button class="icon-f-84" id="btn-search-close"></button>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="account">
             <button><i class="icon-f-94"></i></button>
@@ -97,7 +129,31 @@
           </div>
         </div>
       </div>
+      <div class="search-dropdown-menu" id="search-dropdown">
+        <div class="container">
+          <div class="search-info">Ne arıyorsun?</div>
+          <div class="search-box">
+            <input
+              class="search-input"
+              id="search-input"
+              type="search"
+              name="q"
+              value=""
+              placeholder="ANAHTAR KELİME GİRİN"
+              aria-label="ÜRÜNLERİ ARA..."
+              autocomplete="off"
+              autofocus
+            />
+            <button type="submit" class="icon-f-85"></button>
+          </div>
+          <div class="search-close">
+            <button class="icon-f-84" id="btn-search-close"></button>
+          </div>
+        </div>
+      </div>
     </header>
+    <!-- HEADER  -->
+    <!-- SLIDER  -->
     <section>
       <div class="slider-container">
         <swiper-container
@@ -148,6 +204,8 @@
         </swiper-container>
       </div>
     </section>
+    <!-- SLIDER  -->
+    <!-- COLLECTIONS  -->
     <section>
       <div class="collections">
         <div class="row">
@@ -205,6 +263,8 @@
         </div>
       </div>
     </section>
+    <!-- COLLECTIONS  -->
+    <!-- PRODUCTS  -->
     <section>
       <div class="product-container">
         <div class="product">
@@ -515,7 +575,9 @@
         </div>
       </div>
     </section>
+    <!-- PRODUCTS  -->
     <hr />
+    <!-- BLOG  -->
     <section>
       <div class="blog-container">
         <div class="blog">
@@ -618,7 +680,8 @@
       </div>
     </section>
     <hr />
-
+    <!-- BLOG  -->
+    <!-- INSTAGRAM  -->
     <section>
       <div class="instagram-container">
         <div class="instagram">
@@ -632,7 +695,8 @@
       </div>
     </section>
     <hr />
-
+    <!-- INSTAGRAM  -->
+    <!-- NEWSLETTER  -->
     <section>
       <div class="newsletter-container">
         <div class="newsletter">
@@ -653,7 +717,8 @@
       </div>
     </section>
     <hr />
-
+    <!-- NEWSLETTER  -->
+    <!-- FOOTER  -->
     <footer>
       <div class="footer-container">
         <div class="footer">
@@ -697,6 +762,7 @@
         </div>
       </div>
     </footer>
+    <!-- FOOTER  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>
