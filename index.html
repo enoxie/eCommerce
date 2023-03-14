@@ -119,35 +119,68 @@
         <div class="header-options">
           <div class="search">
             <button id="btn-search"><i class="icon-f-85"></i></button>
+            <div class="dropdown-menu" id="search-dropdown">
+              <div class="container">
+                <div class="search-info">Ne arıyorsun?</div>
+                <div class="search-box">
+                  <input
+                    class="search-input"
+                    id="search-input"
+                    type="search"
+                    name="q"
+                    value=""
+                    placeholder="ANAHTAR KELİME GİRİN"
+                    aria-label="ÜRÜNLERİ ARA..."
+                    autocomplete="off"
+                    autofocus
+                  />
+                  <button type="submit" class="icon-f-85"></button>
+                </div>
+                <div class="search-close">
+                  <button class="icon-f-84" id="btn-search-close"></button>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="account">
             <button><i class="icon-f-94"></i></button>
           </div>
           <div class="cart">
-            <span><i class="icon-f-39"></i></span>
-            <span class="sp-badge-cart">0</span>
-          </div>
-        </div>
-      </div>
-      <div class="search-dropdown-menu" id="search-dropdown">
-        <div class="container">
-          <div class="search-info">Ne arıyorsun?</div>
-          <div class="search-box">
-            <input
-              class="search-input"
-              id="search-input"
-              type="search"
-              name="q"
-              value=""
-              placeholder="ANAHTAR KELİME GİRİN"
-              aria-label="ÜRÜNLERİ ARA..."
-              autocomplete="off"
-              autofocus
-            />
-            <button type="submit" class="icon-f-85"></button>
-          </div>
-          <div class="search-close">
-            <button class="icon-f-84" id="btn-search-close"></button>
+            <span><i class="icon-f-39" id="cart-icon"></i></span>
+            <span class="badge-cart">0</span>
+            <div class="dropdown-menu" id="cart-dropdown">
+              <div class="cart-empty">
+                <a href="#" title="SEPETİ GÖRÜNTÜLE">
+                  <i class="icon-f-39"></i>
+                  <p>Sepette ürün yok</p>
+                </a>
+                <div class="cart-list">
+                  <div class="sp-cart-list"></div>
+                  <div
+                    class="flex-align-center header-cart-more-message-js"
+                    style="display: none"
+                  >
+                    <a href="/cart" class="btn-link-02" title="View cart"
+                      >. . .</a
+                    >
+                  </div>
+                  <div class="sp-cart-total-row">
+                    <div class="sp-cart-total-title">Subtotal:</div>
+                    <div class="sp-cart-total-price">
+                      <span class="money" data-currency-usd="$0">$0</span>
+                    </div>
+                  </div>
+                  <div class="sp-cart-btn">
+                    <div class="sp-item">
+                      <a href="/cart" class="btn">view cart</a>
+                    </div>
+                    <div class="sp-item">
+                      <a href="/checkout" class="btn">checkout</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -31,14 +31,16 @@ window.onscroll = function () {
   stickyHeader();
 };
 if (getCookie("modal") == null) {
-  setCookie("modal", false);
+  setCookie("modal", false, 60);
 }
 let isDiscountInformed = getCookie("modal");
 /*  Elements alıyoruz.*/
 let isOpenSearch = false;
+let isOpenCart = false;
 var header = document.getElementById("header");
 var topbar = document.getElementById("topbar");
 var searchDropdown = document.getElementById("search-dropdown");
+var cartDropdown = document.getElementById("cart-dropdown");
 var btnSearch = document.getElementById("btn-search");
 var searchInput = document.getElementById("search-input");
 var searchClose = document.getElementById("btn-search-close");
@@ -49,9 +51,9 @@ var checkbox = document.getElementById("modal-checkbox");
 
 checkbox.addEventListener("change", (event) => {
   if (event.currentTarget.checked) {
-    setCookie("modal", true);
+    setCookie("modal", true, 60);
   } else {
-    setCookie("modal", false);
+    setCookie("modal", false, 60);
   }
 });
 
@@ -84,9 +86,6 @@ btnSearch.addEventListener("click", function () {
   if (isOpenSearch) {
     searchDropdown.style.display = "flex";
     searchInput.focus();
-    header.style.visibility = "hidden";
-    topbar.style.visibility = "hidden";
-    header.classList.remove("header-sticky");
   }
 });
 
@@ -102,6 +101,35 @@ searchClose.addEventListener("click", function () {
   }
 });
 /* Search Box Events End*/
+
+/* Cart Modal Events Begin */
+
+document.addEventListener("click", function (event) {
+  // Eğer belirlenen kontrollere tıklanırsa cartDropdown toggle çalışacak.
+  if (
+    event.target.matches(".icon-f-39") ||
+    event.target.matches(".badge-cart") ||
+    event.target.matches(".cart span")
+  ) {
+    if (isOpenCart) {
+      isOpenCart = false;
+      openCartDropdown();
+      document.getElementById("cart-icon").style.color = "#c71932";
+    } else {
+      isOpenCart = true;
+      closeCartDropdown();
+      document.getElementById("cart-icon").style.color = "#303030";
+    }
+  }
+});
+
+function openCartDropdown() {
+  cartDropdown.style.display = "flex";
+}
+function closeCartDropdown() {
+  cartDropdown.style.display = "none";
+}
+/* Cart Modal Events End*/
 
 // headerın pozisyonu
 var sticky = header.offsetTop;
