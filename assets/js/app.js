@@ -36,18 +36,51 @@ if (getCookie("modal") == null) {
 let isDiscountInformed = getCookie("modal");
 /*  Elements alıyoruz.*/
 let isOpenSearch = false;
+let isOpenLoginModal = false;
 let isOpenCart = false;
-var header = document.getElementById("header");
-var topbar = document.getElementById("topbar");
-var searchDropdown = document.getElementById("search-dropdown");
-var cartDropdown = document.getElementById("cart-dropdown");
-var btnSearch = document.getElementById("btn-search");
-var searchInput = document.getElementById("search-input");
-var searchClose = document.getElementById("btn-search-close");
-var modalDiscount = document.getElementById("modal-discount");
-var checkbox = document.getElementById("modal-checkbox");
-
+const header = document.getElementById("header");
+const topbar = document.getElementById("topbar");
+const searchDropdown = document.getElementById("search-dropdown");
+const cartDropdown = document.getElementById("cart-dropdown");
+const btnSearch = document.getElementById("btn-search");
+const searchInput = document.getElementById("search-input");
+const searchClose = document.getElementById("btn-search-close");
+const modalDiscount = document.getElementById("modal-discount");
+const checkbox = document.getElementById("modal-checkbox");
+const btnAccount = document.querySelector(".account button");
+const loginModal = document.querySelector(".modal-popup");
+let cartList = [
+  {
+    id: 1,
+    name: "Tshirt",
+    price: 300,
+  },
+  {
+    id: 2,
+    name: "Tshirt",
+    price: 300,
+  },
+];
 /* Modal Events Begin */
+
+// Eğer kullanıcı bilgilendirilmediyse modal göster
+!isDiscountInformed ? openDiscountModal() : "";
+
+function closeDiscountModal() {
+  modalDiscount.style.display = "none";
+}
+function openDiscountModal() {
+  modalDiscount.style.display = "flex";
+}
+document.addEventListener("click", function (event) {
+  // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+  if (
+    event.target.matches(".modal-discount") ||
+    event.target.matches(".modal-close")
+  ) {
+    closeDiscountModal();
+  }
+});
 
 checkbox.addEventListener("change", (event) => {
   if (event.currentTarget.checked) {
@@ -56,27 +89,6 @@ checkbox.addEventListener("change", (event) => {
     setCookie("modal", false, 60);
   }
 });
-
-if (!isDiscountInformed) {
-  openModal();
-}
-
-document.addEventListener("click", function (event) {
-  // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-  if (
-    event.target.matches(".modal-discount") ||
-    event.target.matches(".modal-close")
-  ) {
-    closeModal();
-  }
-});
-function closeModal() {
-  modalDiscount.style.display = "none";
-}
-function openModal() {
-  modalDiscount.style.display = "flex";
-}
-
 /* Modal Events End*/
 
 /* Search Box Events Begin */
@@ -102,6 +114,30 @@ searchClose.addEventListener("click", function () {
 });
 /* Search Box Events End*/
 
+/* Login Form Events Begin */
+btnAccount.addEventListener("click", function () {
+  if (!isOpenLoginModal) {
+    isOpenLoginModal = true;
+    loginModal.style.display = "block";
+  } else {
+    isOpenLoginModal = false;
+    loginModal.style.display = "none";
+  }
+});
+
+document.addEventListener("click", function (event) {
+  // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+  if (
+    event.target.matches(".modal-popup") ||
+    event.target.matches(".modal-popup .modal-item .item-close")
+  ) {
+    loginModal.style.display = "none";
+    isOpenLoginModal = false;
+  }
+});
+
+/* Login Form Events End */
+
 /* Cart Modal Events Begin */
 
 document.addEventListener("click", function (event) {
@@ -111,13 +147,16 @@ document.addEventListener("click", function (event) {
     event.target.matches(".badge-cart") ||
     event.target.matches(".cart span")
   ) {
-    if (isOpenCart) {
-      isOpenCart = false;
+    if (!isOpenCart) {
+      isOpenCart = true;
       openCartDropdown();
+      cartDropdown.style.height = cartList.length * 70 + 190 + "px";
+
       document.getElementById("cart-icon").style.color = "#c71932";
     } else {
-      isOpenCart = true;
+      isOpenCart = false;
       closeCartDropdown();
+      cartDropdown.style.height = "0px";
       document.getElementById("cart-icon").style.color = "#303030";
     }
   }
@@ -127,7 +166,7 @@ function openCartDropdown() {
   cartDropdown.style.display = "flex";
 }
 function closeCartDropdown() {
-  cartDropdown.style.display = "none";
+  cartDropdown.style.display = "hidden";
 }
 /* Cart Modal Events End*/
 

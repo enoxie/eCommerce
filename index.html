@@ -144,38 +144,184 @@
           </div>
           <div class="account">
             <button><i class="icon-f-94"></i></button>
+            <div id="myModal" class="modal-popup">
+              <div class="modal-item">
+                <span class="item-close">×</span>
+                <div id="login">
+                  <h2 class="login-title">
+                    Giriş Yap <a href="#">Kayıt Ol</a>
+                  </h2>
+                  <span>Zaten bir hesabın mı var?</span>
+                  <div class="login-form">
+                    <form>
+                      <input
+                        type="hidden"
+                        name="form_type"
+                        value="customer_login"
+                      /><input type="hidden" name="utf8" value="✓" />
+
+                      <div class="form-group">
+                        <!--  <label for="loginInputName">E-MAIL <sup>*</sup></label> -->
+                        <div class="login-form-required"></div>
+                        <input
+                          type="email"
+                          name="customer[email]"
+                          class="form-control"
+                          id="loginInputName"
+                          placeholder="Kullanıcı adı"
+                          autocomplete="off"
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <!--  <label for="loginInputEmail">PASSWORD <sup>*</sup></label> -->
+                        <input
+                          type="password"
+                          value=""
+                          name="customer[password]"
+                          class="form-control"
+                          id="loginInputEmail"
+                          placeholder="Şifre"
+                          autocomplete="off"
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <button class="btn-login" type="submit">
+                          GİRİŞ YAP
+                        </button>
+                      </div>
+
+                      <div class="additional-links">
+                        <a href="/account/login">Şifreni mi unuttun?</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="cart">
             <span><i class="icon-f-39" id="cart-icon"></i></span>
-            <span class="badge-cart">0</span>
+            <span class="badge-cart">1</span>
             <div class="dropdown-menu" id="cart-dropdown">
-              <div class="cart-empty">
-                <a href="#" title="SEPETİ GÖRÜNTÜLE">
+              <div class="cart-content">
+                <a href="#" title="SEPETİ GÖRÜNTÜLE" class="cart-empty hide">
                   <i class="icon-f-39"></i>
                   <p>Sepette ürün yok</p>
                 </a>
-                <div class="cart-list">
-                  <div class="sp-cart-list"></div>
-                  <div
-                    class="flex-align-center header-cart-more-message-js"
-                    style="display: none"
-                  >
-                    <a href="/cart" class="btn-link-02" title="View cart"
-                      >. . .</a
-                    >
-                  </div>
-                  <div class="sp-cart-total-row">
-                    <div class="sp-cart-total-title">Subtotal:</div>
-                    <div class="sp-cart-total-price">
-                      <span class="money" data-currency-usd="$0">$0</span>
+
+                <div class="cart-box">
+                  <div class="cart-list">
+                    <div class="cart-item">
+                      <a href="#" title="View Product">
+                        <div class="cart-item-img">
+                          <img
+                            src="//cdn.shopify.com/s/files/1/0049/2856/9434/products/p-21_small.jpg?v=1561601244"
+                            alt=""
+                          />
+                        </div>
+                        <div class="cart-item-descriptions">
+                          <h2 class="cart-item-title">Buttoned Shirt</h2>
+                          <div class="cart-item-quantity">1 x</div>
+                          <div class="cart-item-price">
+                            <span class="money" data-currency-usd="$10"
+                              >$10</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-close">
+                        <a href="#" class="svg-icon-delete" title="Delete">
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 22 22"
+                            style="enable-background: new 0 0 22 22"
+                            xml:space="preserve"
+                          >
+                            <g>
+                              <path
+                                d="M3.6,21.1c-0.1-0.1-0.2-0.3-0.2-0.4v-15H2.2C2,5.7,1.9,5.6,1.7,5.5C1.6,5.4,1.6,5.2,1.6,5.1c0-0.2,0.1-0.3,0.2-0.4
+                                 C1.9,4.5,2,4.4,2.2,4.4h5V1.9c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.4-0.2h6.3c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4
+                                 v2.5h5c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2h-1.3v15
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2H4.1C3.9,21.3,3.7,21.2,3.6,21.1z M17.2,5.7H4.7v14.4h12.5V5.7z M8.3,9
+                                 c0.1,0.1,0.2,0.3,0.2,0.4v6.9c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4
+                                 c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.4-0.2S8.1,8.9,8.3,9z M8.4,4.4h5V2.6h-5V4.4z M11.4,9c0.1,0.1,0.2,0.3,0.2,0.4v6.9
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4c0-0.2,0.1-0.3,0.2-0.4
+                                 c0.1-0.1,0.3-0.2,0.4-0.2S11.3,8.9,11.4,9z M13.6,9c0.1-0.1,0.3-0.2,0.4-0.2s0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4v6.9
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4C13.4,9.3,13.5,9.1,13.6,9z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="cart-item">
+                      <a href="#" title="View Product">
+                        <div class="cart-item-img">
+                          <img
+                            src="//cdn.shopify.com/s/files/1/0049/2856/9434/products/p-21_small.jpg?v=1561601244"
+                            alt=""
+                          />
+                        </div>
+                        <div class="cart-item-descriptions">
+                          <h2 class="cart-item-title">Buttoned Shirt</h2>
+                          <div class="cart-item-quantity">1 x</div>
+                          <div class="cart-item-price">
+                            <span class="money" data-currency-usd="$10"
+                              >$10</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-close">
+                        <a href="#" class="svg-icon-delete" title="Delete">
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 22 22"
+                            style="enable-background: new 0 0 22 22"
+                            xml:space="preserve"
+                          >
+                            <g>
+                              <path
+                                d="M3.6,21.1c-0.1-0.1-0.2-0.3-0.2-0.4v-15H2.2C2,5.7,1.9,5.6,1.7,5.5C1.6,5.4,1.6,5.2,1.6,5.1c0-0.2,0.1-0.3,0.2-0.4
+                                 C1.9,4.5,2,4.4,2.2,4.4h5V1.9c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.4-0.2h6.3c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4
+                                 v2.5h5c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2h-1.3v15
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2H4.1C3.9,21.3,3.7,21.2,3.6,21.1z M17.2,5.7H4.7v14.4h12.5V5.7z M8.3,9
+                                 c0.1,0.1,0.2,0.3,0.2,0.4v6.9c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4
+                                 c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.4-0.2S8.1,8.9,8.3,9z M8.4,4.4h5V2.6h-5V4.4z M11.4,9c0.1,0.1,0.2,0.3,0.2,0.4v6.9
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4c0-0.2,0.1-0.3,0.2-0.4
+                                 c0.1-0.1,0.3-0.2,0.4-0.2S11.3,8.9,11.4,9z M13.6,9c0.1-0.1,0.3-0.2,0.4-0.2s0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4v6.9
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4C13.4,9.3,13.5,9.1,13.6,9z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div class="sp-cart-btn">
-                    <div class="sp-item">
-                      <a href="/cart" class="btn">view cart</a>
+                  <div class="cart-total">
+                    <div class="cart-total-title">Subtotal:</div>
+                    <div class="cart-total-price">
+                      <span class="money" data-currency-usd="$10">$10</span>
                     </div>
-                    <div class="sp-item">
-                      <a href="/checkout" class="btn">checkout</a>
+                  </div>
+                  <div class="cart-btn">
+                    <div class="cart-btn-item">
+                      <a href="/cart" class="btn-cart">view cart</a>
+                    </div>
+                    <div class="cart-btn-item">
+                      <a href="/checkout" class="btn-cart">checkout</a>
                     </div>
                   </div>
                 </div>
