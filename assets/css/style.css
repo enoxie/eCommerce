@@ -2266,6 +2266,10 @@ li.nav-item > a:after {
   font-weight: 500;
   line-height: 2.14;
 }
+.footer-container .footer .copyright .menu-general li a:hover {
+  color: #303030;
+}
+
 .footer-container .footer .social li:first-child {
   padding-left: 0;
 }
@@ -2606,3 +2610,74 @@ input[type="checkbox"]:checked ~ label .check {
 }
 
 /* Modal Discount End */
+
+/* Single Product Page Begin */
+
+/* BREADCRUMB BEGIN*/
+
+.breadcrumb {
+  padding: 88px 0 92px 0;
+  text-align: center;
+  margin: 0 0 100px 0;
+  background: #ffffff;
+}
+.breadcrumb .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.breadcrumb .title {
+  font-size: 3.2em;
+  line-height: 1.3;
+  font-weight: 400;
+  padding-bottom: 0;
+  text-transform: capitalize;
+  color: #303030;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.breadcrumb ul li:first-child {
+  padding-left: 0;
+}
+.breadcrumb ul li {
+  font-size: 0.9333333333333333em;
+  padding: 4px 6px 4px 11px;
+  position: relative;
+  font-weight: 400;
+  line-height: 1.85714285714;
+  color: #303030;
+}
+
+.breadcrumb ul li a {
+  transition: color 0.2s linear;
+  color: #303030;
+}
+.breadcrumb ul li a:hover {
+  color: #c71932;
+}
+.breadcrumb ul li:not(:first-child):before {
+  content: "/";
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 4px px;
+}
+/* BREADCRUMB END*/
+
+/* PRODUCT BEGIN */
+
+/* PRODUCT END */
+
+/* Single Product Page End */

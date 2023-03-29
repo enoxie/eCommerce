@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thora Store</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <base href="../" />
+  </head>
+  <body>
+    <!-- MODAL DISCOUNT  -->
+    <div class="modal-discount" id="modal-discount">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="modal-close icon-f-84"
+              id="modal-close"
+            ></button>
+          </div>
+
+          <div class="modal-row">
+            <div class="modal-col">
+              <img src="./assets/images/modal/modal.jpg" alt="" />
+            </div>
+            <div class="modal-col">
+              <div class="modal-title">
+                <h3 class="text-01">ŞİMDİ ABONE OL</h3>
+                <h1 class="text-02">Kış koleksiyonunda %20 indirim kazanın</h1>
+                <p class="text-03">
+                  Yeni ürünlerimizden, özel tekliflerimizden, ve en son moda
+                  güncellemelerinden ilk siz haberdar olun!
+                </p>
+              </div>
+
+              <div class="modal-input-group">
+                <input
+                  type="email"
+                  name="contact[email]"
+                  class="modal-input"
+                  value=""
+                  placeholder="E-postanızı giriniz"
+                  autocorrect="off"
+                  autocapitalize="off"
+                />
+                <button class="btn-modal-subscribe">ABONE OL</button>
+
+                <div class="checkbox-group">
+                  <input type="checkbox" id="modal-checkbox" />
+                  <label for="modal-checkbox">
+                    <span class="check"></span>
+                    <span class="box"></span>
+                    Bu mesajı bir daha gösterme
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL DISCOUNT  -->
+    <!-- HEADER  -->
+    <header>
+      <div class="topbar" id="topbar">
+        <div class="items">
+          <a href="#">SİPARİŞ TAKİBİ</a>
+          <a href="#">Hesabım</a>
+        </div>
+      </div>
+      <div class="header" id="header">
+        <div class="header-menu">
+          <ul>
+            <li class="dropdown-item">
+              <a href="./" class="active">Anasayfa</a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a href="#"><span>Dropdown Menu - 1</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Dropdown Menu - 2</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Dropdown Menu - 3</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Dropdown Menu - 4</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown-item">
+              <a href="#">HAKKIMIZDA</a>
+              <div class="dropdown-menu">
+                <ul>
+                  <li>
+                    <a href="#"><span>Dropdown Menu - 1</span></a>
+                  </li>
+                  <li>
+                    <a href="#"><span>Dropdown Menu - 2</span></a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown-item"><a href="#">Mağaza</a></li>
+            <li class="dropdown-item"><a href="#">Blog</a></li>
+            <li class="dropdown-item"><a href="#">İLETİŞİM</a></li>
+          </ul>
+        </div>
+        <div class="header-logo">
+          <a href="./" class="title">Thora</a>
+        </div>
+        <div class="header-options">
+          <div class="search">
+            <button id="btn-search"><i class="icon-f-85"></i></button>
+            <div class="dropdown-menu" id="search-dropdown">
+              <div class="container">
+                <div class="search-info">Ne arıyorsun?</div>
+                <div class="search-box">
+                  <input
+                    class="search-input"
+                    id="search-input"
+                    type="search"
+                    name="q"
+                    value=""
+                    placeholder="ANAHTAR KELİME GİRİN"
+                    aria-label="ÜRÜNLERİ ARA..."
+                    autocomplete="off"
+                    autofocus
+                  />
+                  <button type="submit" class="icon-f-85"></button>
+                </div>
+                <div class="search-close">
+                  <button class="icon-f-84" id="btn-search-close"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="account">
+            <button><i class="icon-f-94"></i></button>
+            <div id="myModal" class="modal-popup">
+              <div class="modal-item">
+                <span class="item-close">×</span>
+                <div id="login">
+                  <h2 class="login-title">
+                    Giriş Yap <a href="#">Kayıt Ol</a>
+                  </h2>
+                  <span>Zaten bir hesabın mı var?</span>
+                  <div class="login-form">
+                    <form>
+                      <input
+                        type="hidden"
+                        name="form_type"
+                        value="customer_login"
+                      /><input type="hidden" name="utf8" value="✓" />
+
+                      <div class="form-group">
+                        <!--  <label for="loginInputName">E-MAIL <sup>*</sup></label> -->
+                        <div class="login-form-required"></div>
+                        <input
+                          type="email"
+                          name="customer[email]"
+                          class="form-control"
+                          id="loginInputName"
+                          placeholder="Kullanıcı adı"
+                          autocomplete="off"
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <!--  <label for="loginInputEmail">PASSWORD <sup>*</sup></label> -->
+                        <input
+                          type="password"
+                          value=""
+                          name="customer[password]"
+                          class="form-control"
+                          id="loginInputEmail"
+                          placeholder="Şifre"
+                          autocomplete="off"
+                        />
+                      </div>
+
+                      <div class="form-group">
+                        <button class="btn-login" type="submit">
+                          GİRİŞ YAP
+                        </button>
+                      </div>
+
+                      <div class="additional-links">
+                        <a href="/account/login">Şifreni mi unuttun?</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart">
+            <span><i class="icon-f-39" id="cart-icon"></i></span>
+            <span class="badge-cart">1</span>
+            <div class="dropdown-menu" id="cart-dropdown">
+              <div class="cart-content">
+                <a href="#" title="SEPETİ GÖRÜNTÜLE" class="cart-empty hide">
+                  <i class="icon-f-39"></i>
+                  <p>Sepette ürün yok</p>
+                </a>
+
+                <div class="cart-box">
+                  <div class="cart-list">
+                    <div class="cart-item">
+                      <a href="#" title="View Product">
+                        <div class="cart-item-img">
+                          <img
+                            src="//cdn.shopify.com/s/files/1/0049/2856/9434/products/p-21_small.jpg?v=1561601244"
+                            alt=""
+                          />
+                        </div>
+                        <div class="cart-item-descriptions">
+                          <h2 class="cart-item-title">Buttoned Shirt</h2>
+                          <div class="cart-item-quantity">1 x</div>
+                          <div class="cart-item-price">
+                            <span class="money" data-currency-usd="$10"
+                              >$10</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-close">
+                        <a href="#" class="svg-icon-delete" title="Delete">
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 22 22"
+                            style="enable-background: new 0 0 22 22"
+                            xml:space="preserve"
+                          >
+                            <g>
+                              <path
+                                d="M3.6,21.1c-0.1-0.1-0.2-0.3-0.2-0.4v-15H2.2C2,5.7,1.9,5.6,1.7,5.5C1.6,5.4,1.6,5.2,1.6,5.1c0-0.2,0.1-0.3,0.2-0.4
+                                 C1.9,4.5,2,4.4,2.2,4.4h5V1.9c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.4-0.2h6.3c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4
+                                 v2.5h5c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2h-1.3v15
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2H4.1C3.9,21.3,3.7,21.2,3.6,21.1z M17.2,5.7H4.7v14.4h12.5V5.7z M8.3,9
+                                 c0.1,0.1,0.2,0.3,0.2,0.4v6.9c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4
+                                 c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.4-0.2S8.1,8.9,8.3,9z M8.4,4.4h5V2.6h-5V4.4z M11.4,9c0.1,0.1,0.2,0.3,0.2,0.4v6.9
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4c0-0.2,0.1-0.3,0.2-0.4
+                                 c0.1-0.1,0.3-0.2,0.4-0.2S11.3,8.9,11.4,9z M13.6,9c0.1-0.1,0.3-0.2,0.4-0.2s0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4v6.9
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4C13.4,9.3,13.5,9.1,13.6,9z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="cart-item">
+                      <a href="#" title="View Product">
+                        <div class="cart-item-img">
+                          <img
+                            src="//cdn.shopify.com/s/files/1/0049/2856/9434/products/p-21_small.jpg?v=1561601244"
+                            alt=""
+                          />
+                        </div>
+                        <div class="cart-item-descriptions">
+                          <h2 class="cart-item-title">Buttoned Shirt</h2>
+                          <div class="cart-item-quantity">1 x</div>
+                          <div class="cart-item-price">
+                            <span class="money" data-currency-usd="$10"
+                              >$10</span
+                            >
+                          </div>
+                        </div>
+                      </a>
+                      <div class="item-close">
+                        <a href="#" class="svg-icon-delete" title="Delete">
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 22 22"
+                            style="enable-background: new 0 0 22 22"
+                            xml:space="preserve"
+                          >
+                            <g>
+                              <path
+                                d="M3.6,21.1c-0.1-0.1-0.2-0.3-0.2-0.4v-15H2.2C2,5.7,1.9,5.6,1.7,5.5C1.6,5.4,1.6,5.2,1.6,5.1c0-0.2,0.1-0.3,0.2-0.4
+                                 C1.9,4.5,2,4.4,2.2,4.4h5V1.9c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.4-0.2h6.3c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4
+                                 v2.5h5c0.2,0,0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2h-1.3v15
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2H4.1C3.9,21.3,3.7,21.2,3.6,21.1z M17.2,5.7H4.7v14.4h12.5V5.7z M8.3,9
+                                 c0.1,0.1,0.2,0.3,0.2,0.4v6.9c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4
+                                 c0-0.2,0.1-0.3,0.2-0.4c0.1-0.1,0.3-0.2,0.4-0.2S8.1,8.9,8.3,9z M8.4,4.4h5V2.6h-5V4.4z M11.4,9c0.1,0.1,0.2,0.3,0.2,0.4v6.9
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4c0-0.2,0.1-0.3,0.2-0.4
+                                 c0.1-0.1,0.3-0.2,0.4-0.2S11.3,8.9,11.4,9z M13.6,9c0.1-0.1,0.3-0.2,0.4-0.2s0.3,0.1,0.4,0.2c0.1,0.1,0.2,0.3,0.2,0.4v6.9
+                                 c0,0.2-0.1,0.3-0.2,0.4c-0.1,0.1-0.3,0.2-0.4,0.2s-0.3-0.1-0.4-0.2c-0.1-0.1-0.2-0.3-0.2-0.4V9.4C13.4,9.3,13.5,9.1,13.6,9z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cart-total">
+                    <div class="cart-total-title">Subtotal:</div>
+                    <div class="cart-total-price">
+                      <span class="money" data-currency-usd="$10">$10</span>
+                    </div>
+                  </div>
+                  <div class="cart-btn">
+                    <div class="cart-btn-item">
+                      <a href="/cart" class="btn-cart">view cart</a>
+                    </div>
+                    <div class="cart-btn-item">
+                      <a href="/checkout" class="btn-cart">checkout</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER  -->
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <div class="container">
+        <div class="title">Basic Swear Shirt</div>
+        <ul>
+          <li><a href="/">bixbang</a></li>
+
+          <li><a href="/collections/trendy-items" title="">Trendy Items</a></li>
+          <li><span>Basic Swear Shirt</span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- BREADCRUMB -->
+
+    <!-- PRODUCT -->
+
+    <div class="product">
+      <div class="container"></div>
+    </div>
+
+    <!-- PRODUCT -->
+
+    <!-- FOOTER  -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer">
+          <div class="copyright">
+            <a href="/">
+              <h2 class="title">© 2023 Thora</h2>
+            </a>
+            <ul class="menu-general">
+              <li><a href="#">Bloglar</a></li>
+              <li><a href="#">SSS</a></li>
+              <li><a href="#">Bize Ulaşın</a></li>
+            </ul>
+          </div>
+          <div class="social">
+            <li>
+              <a
+                class="fa-brands fa-instagram"
+                target="_blank"
+                href="https://www.instagram.com/thorastore"
+                data-tooltip="Instagram"
+              ></a>
+            </li>
+            <li>
+              <a
+                class="fa-brands fa-twitter"
+                target="_blank"
+                href="https://twitter.com/thorastore"
+                data-tooltip="Twitter"
+              ></a>
+            </li>
+
+            <li>
+              <a
+                class="fa-brands fa-linkedin"
+                target="_blank"
+                href="https://www.linkedin.com/enoxie"
+                data-tooltip="Linkedin"
+              ></a>
+            </li>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
