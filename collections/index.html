@@ -353,12 +353,14 @@
     <!-- BREADCRUMB -->
     <div class="breadcrumb">
       <div class="container">
-        <div class="title">Basic Sweat Shirt</div>
+        <div class="title">Kavuniçi Sweatshirt</div>
         <ul>
           <li><a href="/">Thora</a></li>
 
-          <li><a href="/collections/trendy-items" title="">Trendy Items</a></li>
-          <li><span>Basic Sweat Shirt</span></li>
+          <li>
+            <a href="/collections/trendy-items" title="">Trend Ürünler</a>
+          </li>
+          <li><span>Kavuniçi Sweatshirt</span></li>
         </ul>
       </div>
     </div>
@@ -401,11 +403,11 @@
         <div class="sp-col product-info">
           <div class="sp-status">
             <div class="sp-label">
-              <div class="sp-label-out-stock hide">Sold Out</div>
+              <div class="sp-label-out-stock hide">Stok dışı</div>
               <div class="sp-label-discount hide">-50%</div>
             </div>
           </div>
-          <h1 class="sp-title" itemprop="name">Basic Sweat Shirt</h1>
+          <h1 class="sp-title" itemprop="name">Kavuniçi Sweatshirt</h1>
           <div class="sp-review">
             <div class="sp-stars">
               <span class="sp-star">
@@ -426,19 +428,22 @@
           </div>
           <div class="sp-collapse-content" itemprop="description">
             <p>
-              Descriptive language appeals to all five of our senses: taste,
-              touch, sight, smell, and sound. When used correctly, descriptive
-              words can entertain, persuade, inform.
+              Pamuklu sweatshirt kumaşından üretilmiştir. Bisiklet yaka, kol ve
+              etek uçları esnek ribanalı, rahat ve spor tasarımı ile eşofmanlar,
+              şortlar ve jean pantolonlar ile kombinleyip kullanabileceğiniz
+              Oversize Sweatshirt.
             </p>
           </div>
 
           <div class="sp-wrapper product-information-buttons">
-            <button data-target="size-modal">
-              <span class="icon-f-09"></span> Size guide
+            <button id="btn-size-modal" data-target="size-modal">
+              <span class="icon-f-09"></span> Ölçü Rehberi
             </button>
-            <button><span class="icon-f-44"></span> Shipping</button>
-            <button>
-              <span class="icon-f-72"></span> Ask about this product
+            <button id="btn-shipping-modal" data-target="shipping-modal">
+              <span class="icon-f-44"></span> Gönderim
+            </button>
+            <button id="btn-contact-modal" data-target="contact-modal">
+              <span class="icon-f-72"></span> Ürün hakkında bilgi
             </button>
           </div>
 
@@ -446,20 +451,22 @@
             <form>
               <div class="sp-form-input-row">
                 <div class="sp-input-counter">
-                  <span class="minus-btn icon-f-83"></span>
+                  <span class="minus-btn icon-f-83" id="btn-minus"></span>
                   <input
                     type="text"
                     name="quantity"
+                    id="quantity"
                     value="1"
-                    size="9999"
                     autocomplete="off"
+                    pattern="^[0-9]*$"
+                    placeholder="1"
                   />
-                  <span class="plus-btn icon-f-82"></span>
+                  <span class="plus-btn icon-f-82" id="btn-plus"></span>
                 </div>
                 <div class="sp-add-to-cart">
                   <button class="btn-add-to-cart">
                     <span class="icon icon-shopping_basket"></span>
-                    <span>ADD TO CART</span>
+                    <span>SEPETE EKLE</span>
                   </button>
                 </div>
 
@@ -477,25 +484,25 @@
             <div class="sp-add-info">
               <ul>
                 <li>
-                  <span itemprop="brand">Vendor:</span>
+                  <span itemprop="brand">Satıcı:</span>
                   <a href="/collections/#">zara</a>
                 </li>
                 <li>
-                  <span>Product Type:</span>
-                  <a href="/collections/#">popularity</a>
+                  <span>Ürün tipi:</span>
+                  <a href="/collections/#">Kışlık Ürün</a>
                 </li>
                 <li class="hide">
                   <span>Barcode:</span> <span class="barcode"></span>
                 </li>
                 <li>
-                  <span>Tags:</span
-                  ><a href="/collections/#">Awesome</a>,&nbsp;<a
+                  <span>Etiketler:</span
+                  ><a href="/collections/#">Mükemmel</a>,&nbsp;<a
                     href="/collections/#"
-                    >Summer</a
-                  >,&nbsp;<a href="/collections/#">Beachwear</a>
+                    >Kışlık</a
+                  >,&nbsp;<a href="/collections/#">Yeni Sezon</a>
                 </li>
                 <li>
-                  <span>Share:</span
+                  <span>Paylaş:</span
                   ><!-- /snippets/social-sharing.liquid -->
                   <div class="social-sharing">
                     <a
@@ -530,10 +537,10 @@
         <div class="modal" id="size-modal" data-dismiss="size-modal">
           <div class="modal-dialog">
             <div class="modal-header">
-              <h6 class="modal-title">SIZE GUIDE</h6>
+              <h6 class="modal-title">ÖLÇÜ REHBERİ</h6>
               <p class="sub-title">
-                This is an approximate conversion table to help you find your
-                size.
+                Bu, bedeninizi bulmanıza yardımcı olacak yaklaşık bir ölçü
+                tablosudur.
               </p>
               <button
                 type="button"
@@ -547,15 +554,15 @@
               <table class="size-table">
                 <thead>
                   <tr>
-                    <th>Italian</th>
-                    <th>Spanish</th>
-                    <th>German</th>
-                    <th>UK</th>
-                    <th>US</th>
-                    <th>Japanese</th>
-                    <th>Chinese</th>
-                    <th>Russian</th>
-                    <th>Korean</th>
+                    <th>Türkiye</th>
+                    <th>İspanya</th>
+                    <th>Almanya</th>
+                    <th>İngiltere</th>
+                    <th>Amerika</th>
+                    <th>Japonya</th>
+                    <th>Çin</th>
+                    <th>Rusya</th>
+                    <th>Kore</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -671,6 +678,47 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="shipping-modal" data-dismiss="shipping-modal">
+          <div class="modal-dialog">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close icon-f-84"
+                data-dismiss="shipping-modal"
+              >
+                <span class="icon icon-clear"></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h6 class="modal-title">GÖNDERİM</h6>
+              <ul>
+                <li>1-3 iş günü içinde ücretsiz gönderim sağlanmaktadır.</li>
+                <li>Mağazamızdan 1-7 iş günü içerisinde teslim alınabilir.</li>
+                <li>Ertesi gün ve Ekspres teslimat seçenekleri de mevcuttur</li>
+                <li>
+                  Satın alınan ürünler turuncu bir kutu içinde teslim edilir.
+                </li>
+                <li>
+                  Gönderim seçenekleri, maliyetler ve teslimat süreleri hakkında
+                  ayrıntılı bilgi için "Teslimat SSS" bölümüne bakın.
+                </li>
+              </ul>
+
+              <h6 class="modal-title">İADE VE DEĞİŞİM</h6>
+              <ul>
+                <li>
+                  İade veya değişim işlemlerini 14 gün içinde ücretsiz bir
+                  şekilde yapabilirsiniz.
+                </li>
+                <li>
+                  Daha fazla bilgi için "İade ve Değişim SSS" bölümümüzdeki
+                  koşullara bakınız
+                </li>
+              </ul>
             </div>
           </div>
         </div>
