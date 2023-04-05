@@ -36,7 +36,6 @@ if (getCookie("modal") == null) {
 let isDiscountInformed = getCookie("modal");
 /*  Elements alıyoruz.*/
 let isOpenSearch = false;
-let isOpenLoginModal = false;
 let isOpenCart = false;
 const header = document.getElementById("header");
 const topbar = document.getElementById("topbar");
@@ -47,7 +46,13 @@ const searchInput = document.getElementById("search-input");
 const searchClose = document.getElementById("btn-search-close");
 const modalDiscount = document.getElementById("modal-discount");
 const checkbox = document.getElementById("modal-checkbox");
+const sizeModal = document.querySelector(".size-modal");
 const btnAccount = document.querySelector(".account button");
+const btnSizeModal = document.querySelector(
+  ".product-information-buttons>button:first-child"
+);
+const btnSizeModalClose = document.querySelector(".size-modal button.close ");
+
 const loginModal = document.querySelector(".modal-popup");
 let cartList = [
   {
@@ -64,21 +69,12 @@ let cartList = [
 /* Modal Events Begin */
 
 // Eğer kullanıcı bilgilendirilmediyse modal göster
-!isDiscountInformed ? openDiscountModal() : "";
+!isDiscountInformed ? (modalDiscount.style.display = "flex") : "";
 
-function closeDiscountModal() {
-  modalDiscount.style.display = "none";
-}
-function openDiscountModal() {
-  modalDiscount.style.display = "flex";
-}
 document.addEventListener("click", function (event) {
   // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-  if (
-    event.target.matches(".modal-discount") ||
-    event.target.matches(".modal-close")
-  ) {
-    closeDiscountModal();
+  if (event.target.matches(".modal") || event.target.matches(".modal-close")) {
+    modalDiscount.style.display = "none";
   }
 });
 
@@ -96,13 +92,13 @@ btnSearch.addEventListener("click", function () {
   isOpenSearch ? (isOpenSearch = false) : (isOpenSearch = true);
 
   if (isOpenSearch) {
-    searchDropdown.style.display = "flex";
+    openModal(btnSearch.getAttribute("data-target"));
     searchInput.focus();
   }
 });
 
 searchClose.addEventListener("click", function () {
-  searchDropdown.style.display = "none";
+  closeModal(searchClose.getAttribute("data-dismiss"));
   header.style.visibility = "visible";
   topbar.style.visibility = "visible";
   isOpenSearch = false;
@@ -116,23 +112,22 @@ searchClose.addEventListener("click", function () {
 
 /* Login Form Events Begin */
 btnAccount.addEventListener("click", function () {
-  if (!isOpenLoginModal) {
-    isOpenLoginModal = true;
-    loginModal.style.display = "block";
-  } else {
-    isOpenLoginModal = false;
-    loginModal.style.display = "none";
+  if (isOpenCart) {
+    isOpenCart = false;
+    cartDropdown.style.display = "hidden";
+    cartDropdown.style.height = "0px";
+    document.getElementById("cart-icon").style.color = "#303030";
   }
+  openModal(btnAccount.getAttribute("data-target"));
 });
 
 document.addEventListener("click", function (event) {
   // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
   if (
-    event.target.matches(".modal-popup") ||
-    event.target.matches(".modal-popup .modal-item .item-close")
+    event.target.matches(".modal") ||
+    event.target.matches(".modal .modal-item .item-close")
   ) {
-    loginModal.style.display = "none";
-    isOpenLoginModal = false;
+    closeModal(event.target.getAttribute("data-dismiss"));
   }
 });
 
@@ -149,26 +144,37 @@ document.addEventListener("click", function (event) {
   ) {
     if (!isOpenCart) {
       isOpenCart = true;
-      openCartDropdown();
+      cartDropdown.style.display = "flex";
       cartDropdown.style.height = cartList.length * 70 + 190 + "px";
 
       document.getElementById("cart-icon").style.color = "#c71932";
     } else {
       isOpenCart = false;
-      closeCartDropdown();
+      cartDropdown.style.display = "hidden";
       cartDropdown.style.height = "0px";
       document.getElementById("cart-icon").style.color = "#303030";
     }
   }
 });
 
-function openCartDropdown() {
-  cartDropdown.style.display = "flex";
-}
-function closeCartDropdown() {
-  cartDropdown.style.display = "hidden";
-}
 /* Cart Modal Events End*/
+
+/* Size Guide Modal Begin*/
+btnSizeModal.addEventListener("click", function () {
+  openModal(btnSizeModal.getAttribute("data-target"));
+});
+
+document.addEventListener("click", function (event) {
+  // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+  if (
+    event.target.matches(".modal") ||
+    event.target.matches(".modal .modal-dialog .close")
+  ) {
+    closeModal(event.target.getAttribute("data-dismiss"));
+  }
+});
+
+/* Size Guide Modal End*/
 
 // headerın pozisyonu
 var sticky = header.offsetTop;
@@ -182,4 +188,14 @@ function stickyHeader() {
       header.classList.remove("header-sticky");
     }
   }
+}
+
+function openModal(target) {
+  let item = document.querySelector("#" + target);
+  item.style.display = "flex";
+}
+
+function closeModal(target) {
+  let item = document.querySelector("#" + target);
+  item.style.display = "none";
 }

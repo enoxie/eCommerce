@@ -1,10 +1,12 @@
 @font-face {
   font-family: "wokiee_icons";
   src: url("../fonts/Wokiee/wokiee_iconsf5c7.eot?87a912");
-  src: url("../fonts/Wokiee/wokiee_iconsf5c7.eot?87a912#iefix") format("embedded-opentype"),
+  src: url("../fonts/Wokiee/wokiee_iconsf5c7.eot?87a912#iefix")
+      format("embedded-opentype"),
     url("../fonts/Wokiee/wokiee_iconsf5c7.ttf?87a912") format("truetype"),
     url("../fonts/Wokiee/wokiee_iconsf5c7.woff?87a912") format("woff"),
-    url("../fonts/Wokiee/wokiee_iconsf5c7.svg?87a912#wokiee_icons") format("svg");
+    url("../fonts/Wokiee/wokiee_iconsf5c7.svg?87a912#wokiee_icons")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }

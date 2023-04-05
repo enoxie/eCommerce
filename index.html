@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- MODAL DISCOUNT  -->
-    <div class="modal-discount" id="modal-discount">
+    <div class="modal" id="modal-discount">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -118,7 +118,9 @@
         </div>
         <div class="header-options">
           <div class="search">
-            <button id="btn-search"><i class="icon-f-85"></i></button>
+            <button id="btn-search" data-target="search-dropdown">
+              <i class="icon-f-85"></i>
+            </button>
             <div class="dropdown-menu" id="search-dropdown">
               <div class="container">
                 <div class="search-info">Ne arıyorsun?</div>
@@ -137,16 +139,20 @@
                   <button type="submit" class="icon-f-85"></button>
                 </div>
                 <div class="search-close">
-                  <button class="icon-f-84" id="btn-search-close"></button>
+                  <button
+                    class="icon-f-84 close"
+                    id="btn-search-close"
+                    data-dismiss="search-dropdown"
+                  ></button>
                 </div>
               </div>
             </div>
           </div>
           <div class="account">
-            <button><i class="icon-f-94"></i></button>
-            <div id="myModal" class="modal-popup">
+            <button data-target="login-modal"><i class="icon-f-94"></i></button>
+            <div id="login-modal" class="modal" data-dismiss="login-modal">
               <div class="modal-item">
-                <span class="item-close">×</span>
+                <span class="item-close" data-dismiss="login-modal">×</span>
                 <div id="login">
                   <h2 class="login-title">
                     Giriş Yap <a href="#">Kayıt Ol</a>

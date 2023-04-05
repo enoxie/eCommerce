@@ -247,6 +247,9 @@ label {
 
 button {
   border-radius: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 input,
@@ -270,13 +273,6 @@ select {
   text-transform: none;
 }
 
-button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -289,13 +285,6 @@ input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
-}
-
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-  -webkit-appearance: listbox;
 }
 
 textarea {
@@ -331,7 +320,6 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
 }
 
 [type="search"]::-webkit-search-cancel-button,
@@ -705,19 +693,7 @@ footer.hidden {
 
 /* Login Form Modal Begin*/
 
-.header .header-options .account .modal-popup {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  animation: modal-discount-anim forwards 0.15s linear;
-}
-.header .header-options .account .modal-popup .modal-item {
+.header .header-options .account .modal .modal-item {
   background-color: #fff;
   top: 50%;
   min-width: 390px;
@@ -728,7 +704,7 @@ footer.hidden {
   display: flex;
   text-align: left !important;
 }
-.header .header-options .account .modal-popup .modal-item .item-close {
+.header .header-options .account .modal .modal-item .item-close {
   position: absolute;
   right: 20px;
   font-size: 1.6666666666666667em;
@@ -738,25 +714,18 @@ footer.hidden {
   top: 15px;
   color: #303030;
 }
-.header .header-options .account .modal-popup .modal-item #login {
+.header .header-options .account .modal .modal-item #login {
   text-align: center;
   min-width: 380px;
 }
-.header .header-options .account .modal-popup .modal-item #login .login-title {
+.header .header-options .account .modal .modal-item #login .login-title {
   font-size: 1.7333333333333334em;
   line-height: 1.3;
   margin-bottom: 10px;
   color: #303030;
   font-weight: 500;
 }
-.header
-  .header-options
-  .account
-  .modal-popup
-  .modal-item
-  #login
-  .login-title
-  a {
+.header .header-options .account .modal .modal-item #login .login-title a {
   margin-left: 15px;
   color: #303030;
   transition: color 0.2s linear;
@@ -764,14 +733,14 @@ footer.hidden {
 .header
   .header-options
   .account
-  .modal-popup
+  .modal
   .modal-item
   #login
   .login-title
   a:hover {
   color: #c71932;
 }
-.header .header-options .account .modal-popup .modal-item #login span {
+.header .header-options .account .modal .modal-item #login span {
   letter-spacing: 0.1em;
   font-size: 0.9333333333333333em;
   line-height: 1.2;
@@ -779,20 +748,14 @@ footer.hidden {
   color: #303030;
 }
 
-.header
-  .header-options
-  .account
-  .modal-popup
-  .modal-item
-  .login-form
-  .form-group {
+.header .header-options .account .modal .modal-item .login-form .form-group {
   margin-top: 17px;
   margin-bottom: 20px;
 }
 .header
   .header-options
   .account
-  .modal-popup
+  .modal
   .modal-item
   .login-form
   .form-group
@@ -816,7 +779,7 @@ footer.hidden {
 .header
   .header-options
   .account
-  .modal-popup
+  .modal
   .modal-item
   .login-form
   .form-group
@@ -826,7 +789,7 @@ footer.hidden {
 .header
   .header-options
   .account
-  .modal-popup
+  .modal
   .modal-item
   .login-form
   .form-group
@@ -855,7 +818,7 @@ footer.hidden {
 .header
   .header-options
   .account
-  .modal-popup
+  .modal
   .modal-item
   .login-form
   .form-group
@@ -868,7 +831,7 @@ footer.hidden {
 .header
   .header-options
   .account
-  .modal-popup
+  .modal
   .modal-item
   .login-form
   .additional-links
@@ -878,7 +841,7 @@ footer.hidden {
 .header
   .header-options
   .account
-  .modal-popup
+  .modal
   .modal-item
   .login-form
   .additional-links
@@ -897,7 +860,7 @@ footer.hidden {
   position: absolute;
   right: -2px;
   top: 73px;
-  z-index: 22;
+  z-index: 9;
   background: #ffffff;
   text-align: center;
   box-shadow: 0 9px 32px rgba(19, 18, 21, 0.11);
@@ -2586,7 +2549,7 @@ li.nav-item > a:after {
 
 /* Modal Discount Begin */
 
-.modal-discount {
+.modal {
   display: none;
   align-items: center;
   justify-content: center;
@@ -2600,9 +2563,9 @@ li.nav-item > a:after {
   left: 0;
   z-index: 30;
   outline: none;
-  animation: modal-discount-anim forwards 0.15s linear;
+  animation: modal-anim forwards 0.15s linear;
 }
-@keyframes modal-discount-anim {
+@keyframes modal-anim {
   from {
     opacity: 0;
   }
@@ -2610,7 +2573,7 @@ li.nav-item > a:after {
     opacity: 1;
   }
 }
-@keyframes modal-discount-dialog-anim {
+@keyframes modal-dialog-anim {
   from {
     opacity: 0;
     transform: translateY(-30%);
@@ -2620,28 +2583,28 @@ li.nav-item > a:after {
     transform: translateY(0%);
   }
 }
-.modal-discount .modal-dialog {
+.modal .modal-dialog {
   width: 721.312px;
   height: 502.328px;
   pointer-events: auto;
   padding: 20px;
   z-index: 999;
   background-color: #ffffff;
-  animation: modal-discount-dialog-anim forwards 0.3s ease-out;
+  animation: modal-dialog-anim forwards 0.3s ease-out;
 }
-.modal-discount .modal-dialog .modal-content {
+.modal .modal-dialog .modal-content {
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 999;
 }
 
-.modal-discount .modal-dialog .modal-content .modal-header {
+.modal .modal-dialog .modal-content .modal-header {
   position: absolute;
   top: 0;
   right: 0;
 }
-.modal-discount .modal-dialog .modal-content .modal-header button {
+.modal .modal-dialog .modal-content .modal-header button {
   font-size: 1.5rem;
   text-decoration: none;
   text-align: center;
@@ -2652,33 +2615,33 @@ li.nav-item > a:after {
   transition: all 0.2s linear;
 }
 
-.modal-discount .modal-dialog .modal-content .modal-header button:hover {
+.modal .modal-dialog .modal-content .modal-header button:hover {
   color: #c71932;
 }
 
-.modal-discount .modal-dialog .modal-content .modal-row {
+.modal .modal-dialog .modal-content .modal-row {
   width: 100%;
   height: 100%;
   display: flex;
 }
 
-.modal-discount .modal-dialog .modal-content .modal-row .modal-col {
+.modal .modal-dialog .modal-content .modal-row .modal-col {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1;
 }
-.modal-discount .modal-dialog .modal-content .modal-row .modal-col:last-child {
+.modal .modal-dialog .modal-content .modal-row .modal-col:last-child {
   padding: 1rem;
 }
-.modal-discount .modal-dialog .modal-content .modal-row .modal-col img {
+.modal .modal-dialog .modal-content .modal-row .modal-col img {
   width: 100%;
   height: 100%;
   background: url(../images/modal/modal.jpg) 0 0 no-repeat;
   background-size: 50% auto;
 }
-.modal-discount
+.modal
   .modal-dialog
   .modal-content
   .modal-row
@@ -2692,7 +2655,7 @@ li.nav-item > a:after {
   color: #303030;
 }
 
-.modal-discount
+.modal
   .modal-dialog
   .modal-content
   .modal-row
@@ -2706,7 +2669,7 @@ li.nav-item > a:after {
   font-weight: 500;
 }
 
-.modal-discount
+.modal
   .modal-dialog
   .modal-content
   .modal-row
@@ -2719,12 +2682,7 @@ li.nav-item > a:after {
   color: #777777;
 }
 
-.modal-discount
-  .modal-dialog
-  .modal-content
-  .modal-row
-  .modal-col
-  .modal-input-group {
+.modal .modal-dialog .modal-content .modal-row .modal-col .modal-input-group {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2733,7 +2691,7 @@ li.nav-item > a:after {
   width: 100%;
 }
 
-.modal-discount
+.modal
   .modal-dialog
   .modal-content
   .modal-row
@@ -2757,7 +2715,7 @@ li.nav-item > a:after {
   text-align: center;
 }
 
-.modal-discount
+.modal
   .modal-dialog
   .modal-content
   .modal-row
@@ -2768,7 +2726,7 @@ li.nav-item > a:after {
   background: #ffffff;
 }
 
-.modal-discount
+.modal
   .modal-dialog
   .modal-content
   .modal-row
@@ -2778,7 +2736,7 @@ li.nav-item > a:after {
   color: transparent;
 }
 
-.modal-discount
+.modal
   .modal-dialog
   .modal-content
   .modal-row
@@ -2810,7 +2768,7 @@ li.nav-item > a:after {
   margin-top: 20px;
 }
 
-.modal-discount
+.modal
   .modal-dialog
   .modal-content
   .modal-row
@@ -3131,22 +3089,26 @@ out stock badge yoksa margin0 varsa 33px olacak */
   display: flex;
 }
 
-.product-information-buttons a {
+.product-information-buttons button {
   display: inline-flex;
   font-size: 0.9333333333333333em;
   transition: color 0.2s linear;
 }
-.product-info .product-information-buttons a:first-child {
+
+.product-information-buttons button:hover {
+  color: #c71932;
+}
+.product-info .product-information-buttons button:first-child {
   padding: 8px 12px 8px 0;
 }
-.product-info .product-information-buttons a:not(:first-child) {
+.product-info .product-information-buttons button:not(:first-child) {
   padding: 8px 12px;
 }
-.product-info .product-information-buttons a.mespr:nth-child(n + 2) {
+.product-info .product-information-buttons button.mespr:nth-child(n + 2) {
   float: right;
   padding-right: 0;
 }
-.product-info .product-information-buttons a > [class*="icon"] {
+.product-info .product-information-buttons button > [class*="icon"] {
   font-size: 1.3333333333333333em;
   padding-right: 8px;
   top: 2px;
@@ -3282,6 +3244,137 @@ out stock badge yoksa margin0 varsa 33px olacak */
 }
 .product-info .sp-wrapper .sp-form-input-row .sp-add-to-compare:hover a {
   color: #ffffff !important;
+}
+
+.product-info .sp-wrapper.product_meta {
+  display: flex;
+  border-top: 1px solid #dedede;
+  padding-top: 43px;
+  margin-top: 50px;
+}
+
+.product-info .sp-wrapper.product_meta .sp-add-info ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-info .sp-wrapper.product_meta .sp-add-info ul li {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #7c7c80;
+}
+.product-info .sp-wrapper.product_meta .sp-add-info ul li span {
+  min-width: 138px;
+  display: inline-block;
+  font-size: 15px;
+}
+.product-info .sp-wrapper.product_meta .sp-add-info ul li span:first-child {
+  color: #303030;
+}
+
+.product-info .sp-wrapper.product_meta .sp-add-info ul li a {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 26px;
+  color: #777777;
+  text-decoration: none;
+  background-color: transparent;
+}
+.product-info .sp-wrapper.product_meta .sp-add-info ul li a:hover {
+  color: #303030;
+}
+.product-info .sp-wrapper.product_meta .sp-add-info .social-sharing a {
+  margin-right: 20px;
+}
+
+.sp-container .sp-row .modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sp-container .sp-row .modal .modal-dialog {
+  position: relative;
+  width: 962px;
+  max-width: 800px;
+  height: 500px;
+  background-color: #fff;
+  padding: 40px 40px 40px 40px;
+}
+.sp-container .sp-row .modal .modal-dialog .modal-header {
+  text-align: center;
+}
+.sp-container .sp-row .modal .modal-dialog .modal-header .modal-title {
+  color: #303030;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-bottom: 6px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sp-container .sp-row .modal .modal-dialog .modal-header .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.5rem;
+  background: none;
+  color: #303030;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  padding: 0;
+}
+
+.sp-container .sp-row .modal .modal-dialog .modal-header .close:hover {
+  color: #c71932;
+}
+
+.sp-container .sp-row .modal .modal-dialog .modal-body .size-table {
+  width: 100%;
+  margin-top: 25px;
+  table-layout: fixed;
+}
+
+.sp-container .sp-row .modal .modal-dialog .modal-body .size-table thead th {
+  color: #777777;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  padding: 2px 4px;
+}
+.sp-container .sp-row .modal .modal-dialog .modal-body .size-table tbody td {
+  color: #777777;
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+  padding: 4px 4px;
+}
+
+.sp-container
+  .sp-row
+  .modal
+  .modal-dialog
+  .modal-body
+  .size-table
+  tbody
+  tr:nth-child(odd) {
+  background: #fff;
 }
 /* PRODUCT END */
 
