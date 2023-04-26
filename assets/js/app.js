@@ -56,6 +56,8 @@ const quantityInput = document.querySelector("#quantity");
 const btnPlus = document.querySelector("#btn-plus");
 const btnMinus = document.querySelector("#btn-minus");
 const btnShippingModal = document.querySelector("#btn-shipping-modal");
+const btnProductInfoModal = document.querySelector("#btn-product-info-modal");
+
 const btnSizeModalClose = document.querySelector(".size-modal button.close ");
 const loginModal = document.querySelector(".modal-popup");
 let cartList = [
@@ -224,6 +226,25 @@ document.addEventListener("click", function (event) {
 });
 
 /* Shipping Modal End*/
+
+/* Product Info Modal Begin*/
+
+btnProductInfoModal.addEventListener("click", function () {
+  openModal(btnProductInfoModal.getAttribute("data-target"));
+});
+
+document.addEventListener("click", function (event) {
+  // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+  if (
+    event.target.matches(".modal") ||
+    event.target.matches(".modal .modal-dialog .close")
+  ) {
+    closeModal(event.target.getAttribute("data-dismiss"));
+  }
+});
+
+/* Product Info Modal End*/
+
 // headerın pozisyonu
 var sticky = header.offsetTop;
 
