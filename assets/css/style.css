@@ -264,7 +264,10 @@ textarea {
   font-size: inherit;
   line-height: inherit;
 }
-
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
 button,
 input {
   overflow: visible;
@@ -361,6 +364,29 @@ footer.hidden {
   margin-left: auto;
 }
 
+.btn {
+  min-width: 120px;
+  font-size: 0.9333333333333333em;
+  line-height: 1.42857142857;
+  letter-spacing: 0.03em;
+  position: relative;
+  outline: none;
+  padding: 10px 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  font-weight: 500;
+  background: #303030;
+  border: 2px solid #303030;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
 /*? General Settings End */
 
 /* _____________________________________
@@ -2967,16 +2993,26 @@ input[type="checkbox"]:checked ~ label .check {
 }
 
 .sp-container .sp-row .sp-col .sp-img {
+  width: 470px;
+  height: 500px;
+  overflow: hidden;
+  border: 3px solid #fff;
   position: relative;
+  cursor: crosshair;
 }
 
 .sp-container .sp-row .sp-col .sp-img img {
   max-width: 100%;
-  height: auto;
-  vertical-align: middle;
-  border-style: none;
-  overflow-clip-margin: content-box;
-  overflow: clip;
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sp-container .sp-row .sp-col .sp-img img:hover {
+  cursor: crosshair;
 }
 .sp-container .sp-row .sp-col .sp-images-carousel {
   margin-top: 20px;
@@ -2993,7 +3029,7 @@ input[type="checkbox"]:checked ~ label .check {
   width: 83px;
   height: 83px;
 }
-.sp-container .sp-row .sp-col .sp-images-carousel li a {
+.sp-container .sp-row .sp-col .sp-images-carousel li button {
   display: block;
   position: relative;
   color: #303030;
@@ -3002,7 +3038,7 @@ input[type="checkbox"]:checked ~ label .check {
   width: 100%;
   height: 100%;
 }
-.sp-container .sp-row .sp-col .sp-images-carousel li a img {
+.sp-container .sp-row .sp-col .sp-images-carousel li button img {
   width: 100%;
   height: 100%;
 }
@@ -3419,6 +3455,114 @@ out stock badge yoksa margin0 varsa 33px olacak */
   margin-top: 19px;
 }
 
+/* Product Info Modal Begin*/
+#product-info-modal .modal-dialog {
+  max-width: 500px;
+  max-height: 584px;
+  transform: translate(0, 0);
+  display: inline-block;
+  vertical-align: middle;
+}
+#product-info-modal .modal-dialog .modal-body {
+  text-align: left;
+}
+#product-info-modal .modal-dialog .modal-body .sp-title {
+  color: #303030;
+  font-size: 1.0666666666666667em;
+  font-weight: 700;
+  padding-bottom: 6px;
+  letter-spacing: 0.04em;
+}
+
+#product-info-modal .modal-dialog .modal-body .contact-form .form-control {
+  font-size: 0.9333333333333333em;
+  border: 1px solid #dedede;
+  padding: 13px 18px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  transition: all 0.2s linear;
+  line-height: 28px;
+  background: #ffffff;
+  color: #777777;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.contact-form textarea {
+  height: 160px;
+}
+.contact-form textarea::placeholder,
+input::placeholder {
+  color: #495057;
+  text-transform: uppercase;
+}
+#product-info-modal .modal-dialog .modal-body .contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+#product-info-modal
+  .modal-dialog
+  .modal-body
+  .contact-form
+  .form-control:focus {
+  border-color: #c71932;
+  background: #ffffff;
+}
+#product-info-modal
+  .modal-dialog
+  .modal-body
+  .contact-form
+  .form-group
+  textarea:focus,
+input:focus {
+  text-transform: none;
+}
+
+/* Product Info Modal End*/
+
+/* Product Collapse Begin */
+
+.sp-collapse .sp-item .sp-collapse-title {
+  font-size: 1.2em;
+  line-height: 26px;
+  color: #7c7c80;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  padding: 22px 0;
+}
+.sp-collapse .sp-item .sp-collapse-content {
+  display: none;
+  padding-bottom: 22px;
+}
+.sp-product-info .sp-collapse-content {
+  font-size: 1em;
+  line-height: 22px;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.sp-collapse .sp-item:not(:last-child) {
+  border-bottom: 1px solid#e9e7e7;
+}
+/* Product Collapse End */
 /* PRODUCT END */
 
 /* Single Product Page End */

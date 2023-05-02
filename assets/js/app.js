@@ -57,9 +57,9 @@ const btnPlus = document.querySelector("#btn-plus");
 const btnMinus = document.querySelector("#btn-minus");
 const btnShippingModal = document.querySelector("#btn-shipping-modal");
 const btnProductInfoModal = document.querySelector("#btn-product-info-modal");
-
 const btnSizeModalClose = document.querySelector(".size-modal button.close ");
 const loginModal = document.querySelector(".modal-popup");
+const magnifyingImg = document.querySelector(".zoom-product");
 let cartList = [
   {
     id: 1,
@@ -70,6 +70,21 @@ let cartList = [
     id: 2,
     name: "Tshirt",
     price: 300,
+  },
+];
+
+let imageList = [
+  {
+    id: 1,
+    url: "../assets/images/product/product-01.jpg",
+  },
+  {
+    id: 2,
+    url: "../assets/images/product/product-02.jpg",
+  },
+  {
+    id: 3,
+    url: "../assets/images/product/product-03.jpg",
   },
 ];
 /* Modal Events Begin */
@@ -192,10 +207,7 @@ btnPlus.addEventListener("click", function () {
 });
 /* Product Page End */
 
-/* Size Guide Modal Begin*/
-btnSizeModal.addEventListener("click", function () {
-  openModal(btnSizeModal.getAttribute("data-target"));
-});
+/* Product Informations General */
 
 document.addEventListener("click", function (event) {
   // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
@@ -205,6 +217,29 @@ document.addEventListener("click", function (event) {
   ) {
     closeModal(event.target.getAttribute("data-dismiss"));
   }
+});
+
+var options = {
+  fillContainer: true,
+  zoomWith: 50,
+  offset: { vertical: 0, horizontal: 10 },
+  zoomPosition: "original",
+};
+new ImageZoom(document.querySelector(".sp-img"), options);
+
+document.addEventListener("click", function (event) {
+  // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+  if (event.target.matches(".sp-images-carousel .carousel-button img")) {
+    magnifyingImg.src = imageList[event.target.getAttribute("img-id") - 1].url;
+    new ImageZoom(document.querySelector(".sp-img"), options);
+  }
+});
+
+/* Product Informations General*/
+
+/* Size Guide Modal Begin*/
+btnSizeModal.addEventListener("click", function () {
+  openModal(btnSizeModal.getAttribute("data-target"));
 });
 
 /* Size Guide Modal End*/
@@ -215,32 +250,12 @@ btnShippingModal.addEventListener("click", function () {
   openModal(btnShippingModal.getAttribute("data-target"));
 });
 
-document.addEventListener("click", function (event) {
-  // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-  if (
-    event.target.matches(".modal") ||
-    event.target.matches(".modal .modal-dialog .close")
-  ) {
-    closeModal(event.target.getAttribute("data-dismiss"));
-  }
-});
-
 /* Shipping Modal End*/
 
 /* Product Info Modal Begin*/
 
 btnProductInfoModal.addEventListener("click", function () {
   openModal(btnProductInfoModal.getAttribute("data-target"));
-});
-
-document.addEventListener("click", function (event) {
-  // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-  if (
-    event.target.matches(".modal") ||
-    event.target.matches(".modal .modal-dialog .close")
-  ) {
-    closeModal(event.target.getAttribute("data-dismiss"));
-  }
 });
 
 /* Product Info Modal End*/
