@@ -24,14 +24,15 @@
   </head>
   <body>
     <!-- MODAL DISCOUNT  -->
-    <div class="modal" id="modal-discount">
+    <div class="modal" id="modal-discount"  data-dismiss="modal-discount">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <button
               type="button"
-              class="modal-close icon-f-84"
+              class="modal-close icon-f-84 close"
               id="modal-close"
+              data-dismiss="modal-discount"
             ></button>
           </div>
 
@@ -547,751 +548,290 @@
           </div>
 
           <div class="sp-collapse">
-            <div class="sp-item">
-              <div class="sp-collapse-title">description</div>
-              <div
-                class="sp-collapse-content"
-                itemprop="description"
-                style="display: none"
-              >
+            <div class="sp-item" data-target="description">
+              <div class="sp-collapse-title">açıklama</div>
+              <div class="sp-collapse-content" >
                 <p dir="ltr">
-                  Descriptive language appeals to all five of our senses: taste,
-                  touch, sight, smell, and sound. When used correctly,
-                  descriptive words can entertain, persuade, inform.
+                  Thora'nın Kadın Koleksiyonundan Kavun Renk Detaylı Sweatshirt
                 </p>
               </div>
             </div>
-            <div class="sp-item">
-              <div class="sp-collapse-title">additional information</div>
+            <div class="sp-item" data-target="additional-info">
+              <div class="sp-collapse-title">ek bilgiler</div>
               <div class="sp-collapse-content">
                 <table class="sp-table-03">
                   <tbody>
                     <tr>
-                      <td>Color:</td>
-                      <td>Blue, Purple, White</td>
+                      <td>Renk:</td>
+                      <td>Mavi, Mor, Beyaz</td>
                     </tr>
                     <tr>
-                      <td>Size:</td>
+                      <td>Beden:</td>
                       <td>20, 24</td>
                     </tr>
                     <tr>
-                      <td>Material:</td>
+                      <td>Kumaş:</td>
                       <td>100% Polyester</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
-            <div id="tab_review" class="sp-item">
-              <div class="sp-collapse-title">Reviews</div>
+            <div class="sp-item" data-target="reviews">
+              <div class="sp-collapse-title">Yorumlar</div>
               <div class="sp-collapse-content">
-                <div style="clear: both"></div>
-                <div
-                  id="judgeme_product_reviews"
-                  class="jdgm-widget jdgm-review-widget jdgm--done-setup-widget jdgm-review-widget--medium"
-                  data-product-title="Basic Swear Shirt"
-                  data-id="1684307935322"
-                  data-from-snippet="false"
-                  data-auto-install="false"
-                >
-                  <div
-                    class="jdgm-rev-widg"
-                    data-updated-at="2023-04-29T02:24:09Z"
-                    data-average-rating="4.00"
-                    data-number-of-reviews="3"
-                    data-number-of-questions="0"
-                  >
-                    <style class="jdgm-temp-hiding-style">
-                      .jdgm-rev-widg {
-                        display: none;
-                      }
-                    </style>
-                    <div class="jdgm-rev-widg__header">
-                      <h2 class="jdgm-rev-widg__title">Customer Reviews</h2>
-                      <div class="jdgm-rev-widg__summary">
-                        <div class="jdgm-rev-widg__summary-inner">
-                          <div
-                            class="jdgm-rev-widg__summary-stars"
-                            aria-label="Average rating is 4.00 stars"
-                            role="img"
-                          >
-                            <span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--off"></span>
-                          </div>
-                          <div class="jdgm-rev-widg__summary-text">
-                            Based on 3 reviews
-                          </div>
+                <div class="review-container">
+                  <div class="review-header">
+                    <h2 class="review-title">Müşteri Yorumları</h2>
+                    <div class="row">
+                      <div class="col">
+                        <div class="review-rating">
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-regular fa-star-half-stroke"></i>
+                          </span>
+                          <span class="star-off"></span>
+                            <i class="fa-regular fa-star"></i>
+                          </span>
                         </div>
+                      <div class="subtitle">
+                        3 incelemeye göre
                       </div>
-                      <div class="jdgm-widget-actions-wrapper">
-                        <a
-                          href="#"
-                          class="jdgm-write-rev-link"
-                          role="button"
-                          aria-expanded="false"
-                          >Write a review</a
-                        >
                       </div>
-                      <div class="jdgm-histogram jdgm-temp-hidden">
-                        <div
-                          class="jdgm-histogram__row"
-                          data-rating="5"
-                          data-frequency="2"
-                          data-percentage="67"
-                        >
-                          <div
-                            class="jdgm-histogram__star"
-                            role="button"
-                            aria-label="67% (2) reviews with 5 star rating"
-                            tabindex="0"
-                          >
-                            <span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span>
-                          </div>
-                          <div class="jdgm-histogram__bar">
-                            <div
-                              class="jdgm-histogram__bar-content"
-                              style="width: 67%"
-                            ></div>
-                          </div>
-                          <div class="jdgm-histogram__percentage">67%</div>
-                          <div class="jdgm-histogram__frequency">(2)</div>
-                        </div>
-                        <div
-                          class="jdgm-histogram__row"
-                          data-rating="4"
-                          data-frequency="0"
-                          data-percentage="0"
-                        >
-                          <div
-                            class="jdgm-histogram__star"
-                            role="button"
-                            aria-label="0% (0) reviews with 4 star rating"
-                            tabindex="0"
-                          >
-                            <span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--off"></span>
-                          </div>
-                          <div class="jdgm-histogram__bar">
-                            <div
-                              class="jdgm-histogram__bar-content"
-                              style="width: 0%"
-                            ></div>
-                          </div>
-                          <div class="jdgm-histogram__percentage">0%</div>
-                          <div class="jdgm-histogram__frequency">(0)</div>
-                        </div>
-                        <div
-                          class="jdgm-histogram__row"
-                          data-rating="3"
-                          data-frequency="0"
-                          data-percentage="0"
-                        >
-                          <div
-                            class="jdgm-histogram__star"
-                            role="button"
-                            aria-label="0% (0) reviews with 3 star rating"
-                            tabindex="0"
-                          >
-                            <span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--off"></span
-                            ><span class="jdgm-star jdgm--off"></span>
-                          </div>
-                          <div class="jdgm-histogram__bar">
-                            <div
-                              class="jdgm-histogram__bar-content"
-                              style="width: 0%"
-                            ></div>
-                          </div>
-                          <div class="jdgm-histogram__percentage">0%</div>
-                          <div class="jdgm-histogram__frequency">(0)</div>
-                        </div>
-                        <div
-                          class="jdgm-histogram__row"
-                          data-rating="2"
-                          data-frequency="1"
-                          data-percentage="33"
-                        >
-                          <div
-                            class="jdgm-histogram__star"
-                            role="button"
-                            aria-label="33% (1) reviews with 2 star rating"
-                            tabindex="0"
-                          >
-                            <span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--off"></span
-                            ><span class="jdgm-star jdgm--off"></span
-                            ><span class="jdgm-star jdgm--off"></span>
-                          </div>
-                          <div class="jdgm-histogram__bar">
-                            <div
-                              class="jdgm-histogram__bar-content"
-                              style="width: 33%"
-                            ></div>
-                          </div>
-                          <div class="jdgm-histogram__percentage">33%</div>
-                          <div class="jdgm-histogram__frequency">(1)</div>
-                        </div>
-                        <div
-                          class="jdgm-histogram__row"
-                          data-rating="1"
-                          data-frequency="0"
-                          data-percentage="0"
-                        >
-                          <div
-                            class="jdgm-histogram__star"
-                            role="button"
-                            aria-label="0% (0) reviews with 1 star rating"
-                            tabindex="0"
-                          >
-                            <span class="jdgm-star jdgm--on"></span
-                            ><span class="jdgm-star jdgm--off"></span
-                            ><span class="jdgm-star jdgm--off"></span
-                            ><span class="jdgm-star jdgm--off"></span
-                            ><span class="jdgm-star jdgm--off"></span>
-                          </div>
-                          <div class="jdgm-histogram__bar">
-                            <div
-                              class="jdgm-histogram__bar-content"
-                              style="width: 0%"
-                            ></div>
-                          </div>
-                          <div class="jdgm-histogram__percentage">0%</div>
-                          <div class="jdgm-histogram__frequency">(0)</div>
-                        </div>
-                        <div
-                          class="jdgm-histogram__row jdgm-histogram__clear-filter"
-                          data-rating="null"
-                          tabindex="0"
-                        >
-                          See all reviews
-                        </div>
-                      </div>
-                      <div class="jdgm-rev-widg__sort-wrapper">
-                        <div class="jdgm-sort-dropdown-wrapper">
-                          <select
-                            class="jdgm-sort-dropdown"
-                            aria-label="Sort dropdown"
-                          >
-                            <option value="most-recent">Most Recent</option>
-                            <option value="highest-rating">
-                              Highest Rating
-                            </option>
-                            <option value="lowest-rating">Lowest Rating</option>
-                            <option value="with-pictures">Only Pictures</option>
-                            <option value="pictures-first">
-                              Pictures First
-                            </option>
-                            <option value="videos-first">Videos First</option>
-                            <option value="most-helpful">
-                              Most Helpful
-                            </option></select
-                          ><span class="jdgm-sort-dropdown-arrow"></span>
-                        </div>
-                      </div>
-
-                      <div class="jdgm-rev__br"></div>
-                      <div class="jdgm-form-wrapper" style="display: none">
-                        <form class="jdgm-form" novalidate="novalidate">
-                          <div class="jdgm-form__name-fieldset">
-                            <label for="jdgm_review_reviewer_name_hzzu3dcal"
-                              >Name</label
-                            >
-
-                            <span
-                              class="jdgm-form__reviewer-name-format-container"
-                            >
-                              (<label
-                                for="jdgm_review_reviewer_name_format_hzzu3dcal"
-                                class="jdgm-form__inline-label jdgm-always-visible"
-                                >displayed publicly like</label
-                              >
-                              <span
-                                class="jdgm-form__reviewer-name-format-dropdown-wrapper"
-                              >
-                                <select
-                                  id="jdgm_review_reviewer_name_format_hzzu3dcal"
-                                  name="reviewer_name_format"
-                                  class="jdgm-form__reviewer-name-format-dropdown"
-                                >
-                                  <option value="" selected="">
-                                    John Smith
-                                  </option>
-
-                                  <option value="last_initial">John S.</option>
-
-                                  <option value="all_initials">J.S.</option>
-
-                                  <option value="anonymous">Anonymous</option>
-                                </select>
-                                <span
-                                  class="jdgm-form__reviewer-name-format-dropdown-arrow"
-                                ></span>
-                              </span>
-                              )
-                            </span>
-
-                            <input
-                              id="jdgm_review_reviewer_name_hzzu3dcal"
-                              name="reviewer_name"
-                              type="text"
-                              placeholder="Enter your name (public)"
-                              aria-label="Name"
-                            />
-                          </div>
-
-                          <div class="jdgm-form__email-fieldset">
-                            <label for="jdgm_review_reviewer_email_hzzu3dcal"
-                              >Email</label
-                            >
-                            <input
-                              id="jdgm_review_reviewer_email_hzzu3dcal"
-                              name="reviewer_email"
-                              type="email"
-                              required=""
-                              placeholder="Enter your email (private)"
-                              aria-label="Email"
-                              aria-required="true"
-                            />
-                          </div>
-
-                          <div
-                            class="jdgm-form__rating-fieldset"
-                            aria-label="Rating"
-                          >
-                            <label>Rating</label>
-                            <span
-                              class="jdgm-form__rating"
-                              style="cursor: pointer"
-                              ><a
-                                data-alt="1"
-                                class="jdgm-star jdgm--on"
-                                title="1 star"
-                                role="button"
-                                aria-label="1 star"
-                              ></a
-                              ><a
-                                data-alt="2"
-                                class="jdgm-star jdgm--on"
-                                title="2 stars"
-                                role="button"
-                                aria-label="2 stars"
-                              ></a
-                              ><a
-                                data-alt="3"
-                                class="jdgm-star jdgm--on"
-                                title="3 stars"
-                                role="button"
-                                aria-label="3 stars"
-                              ></a
-                              ><a
-                                data-alt="4"
-                                class="jdgm-star jdgm--on"
-                                title="4 stars"
-                                role="button"
-                                aria-label="4 stars"
-                              ></a
-                              ><a
-                                data-alt="5"
-                                class="jdgm-star jdgm--on"
-                                title="5 stars"
-                                role="button"
-                                tabindex="0"
-                                aria-label="5 stars"
-                              ></a
-                              ><input name="score" type="hidden" value="5"
-                            /></span>
-                          </div>
-
-                          <div class="jdgm-form__title-fieldset">
-                            <label for="jdgm_review_title_hzzu3dcal"
-                              >Review Title</label
-                            ><span class="jdgm-countdown"></span>
-                            <input
-                              id="jdgm_review_title_hzzu3dcal"
-                              name="review_title"
-                              type="text"
-                              placeholder="Give your review a title"
-                              aria-label="Review Title"
-                            />
-                          </div>
-
-                          <div class="jdgm-form__body-fieldset">
-                            <label for="jdgm_review_body_hzzu3dcal"
-                              >Review</label
-                            ><span class="jdgm-countdown"></span>
-                            <textarea
-                              id="jdgm_review_body_hzzu3dcal"
-                              rows="5"
-                              name="review_body"
-                              placeholder="Write your comments here"
-                              aria-label="Review"
-                            ></textarea>
-                          </div>
-
-                          <div class="jdgm-custom-forms"></div>
-
-                          <input
-                            type="submit"
-                            class="jdgm-submit-rev btn btn_c button"
-                            value="Submit Review"
-                          />
-                        </form>
-                      </div>
-                      <div
-                        class="jdgm-form-dynamic-wrapper"
-                        style="display: none"
-                      >
-                        <div class="jdgm-mask"></div>
-                        <form class="jdgm-form-dynamic" novalidate="novalidate">
-                          <div
-                            class="jdgm-form-dynamic__close jdgm-close-ico"
-                          ></div>
-
-                          <div
-                            class="jdgm-form-dynamic__picture-upload-field jdgm-form-dynamic__row"
-                            data-pos="-1"
-                          >
-                            <label class="jdgm-picture-dynamic-fieldset-title"
-                              >Picture/Video (optional)</label
-                            >
-
-                            <div class="jdgm-form-dynamic__buttons-row">
-                              <div
-                                class="jdgm-btn jdgm-btn--border jdgm-form-dynamic__back btn btn_c button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                Back
-                              </div>
-                              <div
-                                class="jdgm-btn jdgm-btn--solid jdgm-form-dynamic__next btn btn_c button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                Next
-                              </div>
-                            </div>
-                          </div>
-
-                          <div
-                            class="jdgm-form-dynamic__rating-fieldset jdgm-form-dynamic__row"
-                            data-pos="0"
-                          >
-                            <label>Rating</label>
-                            <span
-                              class="jdgm-form-dynamic__rating"
-                              style="cursor: pointer"
-                              ><a
-                                data-alt="1"
-                                class="jdgm-star jdgm--on"
-                                title="1 star"
-                              ></a
-                              ><a
-                                data-alt="2"
-                                class="jdgm-star jdgm--on"
-                                title="2 stars"
-                              ></a
-                              ><a
-                                data-alt="3"
-                                class="jdgm-star jdgm--on"
-                                title="3 stars"
-                              ></a
-                              ><a
-                                data-alt="4"
-                                class="jdgm-star jdgm--on"
-                                title="4 stars"
-                              ></a
-                              ><a
-                                data-alt="5"
-                                class="jdgm-star jdgm--on"
-                                title="5 stars"
-                              ></a
-                              ><input name="score" type="hidden" value="5"
-                            /></span>
-                            <div class="jdgm-form-dynamic__buttons-row">
-                              <div
-                                class="jdgm-btn jdgm-btn--border jdgm-form-dynamic__back btn btn_c button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                Back
-                              </div>
-                              <div
-                                class="jdgm-btn jdgm-btn--solid jdgm-form-dynamic__next btn btn_c button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                Next
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="jdgm-form-dynamic__row" data-pos="1">
-                            <div class="jdgm-form-dynamic__name-fieldset">
-                              <label for="jdgm_reviewer_name">Name</label>
-                              <input
-                                id="jdgm_reviewer_name"
-                                name="reviewer_name"
-                                type="text"
-                                placeholder="Enter your name (public)"
-                              />
-                            </div>
-
-                            <div class="jdgm-form-dynamic__email-fieldset">
-                              <label for="jdgm_reviewer_email">Email</label>
-                              <input
-                                id="jdgm_reviewer_email"
-                                name="reviewer_email"
-                                type="email"
-                                placeholder="Enter your email (private)"
-                              />
-                            </div>
-                            <div class="jdgm-form-dynamic__buttons-row">
-                              <div
-                                class="jdgm-btn jdgm-btn--border jdgm-form-dynamic__back btn btn_c button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                Back
-                              </div>
-                              <div
-                                class="jdgm-btn jdgm-btn--solid jdgm-form-dynamic__next btn btn_c button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                Next
-                              </div>
-                            </div>
-                          </div>
-
-                          <div
-                            class="jdgm-form-dynamic__row jdgm-form-dynamic__submit-slide"
-                            data-pos="2"
-                          >
-                            <div class="jdgm-form-dynamic__title-fieldset">
-                              <label for="jdgm_review_title">Review Title</label
-                              ><span class="jdgm-countdown"></span>
-                              <input
-                                id="jdgm_review_title"
-                                name="review_title"
-                                type="text"
-                                placeholder="Give your review a title"
-                              />
-                            </div>
-
-                            <div class="jdgm-form-dynamic__body-fieldset">
-                              <label for="jdgm_review_body">Review</label
-                              ><span class="jdgm-countdown"></span>
-                              <textarea
-                                id="jdgm_review_body"
-                                rows="5"
-                                name="review_body"
-                                placeholder="Write your comments here"
-                              ></textarea>
-                            </div>
-                            <div class="jdgm-form-dynamic__buttons-row">
-                              <div
-                                class="jdgm-btn jdgm-btn--border jdgm-form-dynamic__back btn btn_c button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                Back
-                              </div>
-                              <div
-                                class="jdgm-btn jdgm-btn--solid jdgm-form-dynamic__next btn btn_c button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                Next
-                              </div>
-                            </div>
-                          </div>
-
-                          <div
-                            class="jdgm-custom-forms-dynamic jdgm-custom-forms"
-                          ></div>
-
-                          <input
-                            type="submit"
-                            class="jdgm-form-dynamic__submit-rev btn btn_c button"
-                            value="Submit Review"
-                          />
-                        </form>
+                      <div class="col">
+                        <a href="#" class="btn-wrev">Yorum yap</a>
                       </div>
                     </div>
-                    <div class="jdgm-rev-widg__body">
-                      <div class="jdgm-rev-widg__reviews">
-                        <div
-                          class="jdgm-rev jdgm-divider-top jdgm--done-setup"
-                          data-verified-buyer="false"
-                          data-review-id="96c75d31-5d05-4e59-868b-dc57d7bc2c10"
-                          data-product-title="Basic Swear Shirt"
-                          data-product-url="/products/basic-swear-shirt"
-                          data-thumb-up-count="0"
-                          data-thumb-down-count="0"
-                        >
-                          <div class="jdgm-rev__header">
-                            <div class="jdgm-rev__icon">n</div>
-                            <span
-                              class="jdgm-rev__rating"
-                              data-score="2"
-                              tabindex="0"
-                              aria-label="2 star review"
-                              role="img"
-                            >
-                              <span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--off"></span
-                              ><span class="jdgm-star jdgm--off"></span
-                              ><span class="jdgm-star jdgm--off"></span>
-                            </span>
-                            <span
-                              class="jdgm-rev__timestamp"
-                              data-content="2019-07-26 02:24:36 UTC"
-                              >07/26/2019</span
-                            >
-                            <div class="jdgm-rev__br"></div>
-                            <span class="jdgm-rev__buyer-badge-wrapper"> </span>
-                            <span class="jdgm-rev__author-wrapper">
-                              <span class="jdgm-rev__author">ngo van kien</span>
-                              <span class="jdgm-rev__location"> </span>
-                            </span>
+                    <div class="row review-stats">
+                     <div class="row-stats" data-percentage="67" data-count="2">
+                      <div class="review-rating">
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on"></span>
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                      </div>
+                      <div class="p-bar-container">
+                        <div class="progress-bar" style="width: 67%;"></div>
+                      </div>
+                      <div class="stats">
+                        <span class="percentage">67%</span>
+                        <span class="review-count">(2)</span>
+                      </div>
+                     </div>
+                     <div class="row-stats" data-percentage="0" data-count="0">
+                      <div class="review-rating">
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-off"></span>
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                      </div>
+                      <div class="p-bar-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                      </div>
+                      <div class="stats">
+                        <span class="percentage">0%</span>
+                        <span class="review-count">(0)</span>
+                      </div>
+                     </div>
+                     <div class="row-stats" data-percentage="0" data-count="0">
+                      <div class="review-rating">
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-off">
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                          <span class="star-off"></span>
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                      </div>
+                      <div class="p-bar-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                      </div>
+                      <div class="stats">
+                        <span class="percentage">0%</span>
+                        <span class="review-count">(0)</span>
+                      </div>
+                     </div>
+                     <div class="row-stats" data-percentage="33" data-count="1">
+                      <div class="review-rating">
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-off">
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                          <span class="star-off">
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                          <span class="star-off"></span>
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                      </div>
+                      <div class="p-bar-container">
+                        <div class="progress-bar" style="width: 33%;"></div>
+                      </div>
+                      <div class="stats">
+                        <span class="percentage">33%</span>
+                        <span class="review-count">(1)</span>
+                      </div>
+                     </div>
+                     <div class="row-stats" data-percentage="0" data-count="0">
+                      <div class="review-rating">
+                          <span class="star-on">
+                            <i class="fa-solid fa-star"></i>
+                          </span>
+                          <span class="star-off">
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                          <span class="star-off">
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                          <span class="star-off">
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                          <span class="star-off"></span>
+                            <i class="fa-regular fa-star"></i>
+                          </span>
+                      </div>
+                      <div class="p-bar-container">
+                        <div class="progress-bar" style="width: 0%;"></div>
+                      </div>
+                      <div class="stats">
+                        <span class="percentage">0%</span>
+                        <span class="review-count">(0)</span>
+                      </div>
+                     </div>
+                    </div>
+                    <div class="row">
+                      <div class="filter">
+                        <select class="filter-dropdown" aria-label="Sort dropdown">
+                          <option value="most-recent">En yeni</option>
+                          <option value="highest-rating">En Yüksek Puan</option>
+                          <option value="lowest-rating">En Düşük Puan</option>
+                          <option value="with-pictures">Sadece Resimler</option>
+                          <option value="pictures-first">Önce Resimler</option>
+                          <option value="videos-first">Önce Videolar</option>
+                          <option value="most-helpful">En Yararlı</option>
+                        </select>
+                        <span class="filter-dropdown-arrow"></span>
+                      </div>
+                    </div>
+                  
+                  </div>
+                  <div class="review-body">
+                    <div class="row">
+                      <div class="reviews">
+                        <div class="review">
+                          <div class="review-header">
+                            <div class="review-avatar"> E </div>
+                            <div class="review-author">
+                              <div class="review-info">
+                                <div class="review-rating">
+                                  <span class="star-on">
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="star-on">
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="star-on">
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="star-on">
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="star-on"></span>
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                              </div>
+                              <div class="review-timestamp">
+                                <span>09/05/2023</span> 
+                              </div>
+                              </div>
+                            <div class="review-author-name">Enes Bilgi</div>
+                            </div>
+                            
                           </div>
-                          <div class="jdgm-rev__content">
-                            <div class="jdgm-rev__custom-form"></div>
-                            <b class="jdgm-rev__title">good</b>
-                            <div class="jdgm-rev__body"><p>sdsdsds</p></div>
-                            <div class="jdgm-rev__pics"></div>
-                            <div class="jdgm-rev__vids"></div>
+                          <div class="review-body">
+                            <div class="review-title">Etkileyici</div>
+                            <div class="review-message">Anneler günü hediyesi için aldım. Bu kadar memnun kalacağımı düşünmezdim.</div>
                           </div>
-                          <div class="jdgm-rev__actions">
-                            <div class="jdgm-rev__social"></div>
-                            <div class="jdgm-rev__votes"></div>
-                          </div>
-                          <div class="jdgm-rev__reply"></div>
                         </div>
-                        <div
-                          class="jdgm-rev jdgm-divider-top jdgm--done-setup"
-                          data-verified-buyer="false"
-                          data-review-id="fd92fc70-3748-4a52-9bd5-ec76b65a7b72"
-                          data-product-title="Basic Swear Shirt"
-                          data-product-url="/products/basic-swear-shirt"
-                          data-thumb-up-count="0"
-                          data-thumb-down-count="0"
-                        >
-                          <div class="jdgm-rev__header">
-                            <div class="jdgm-rev__icon">H</div>
-                            <span
-                              class="jdgm-rev__rating"
-                              data-score="5"
-                              tabindex="0"
-                              aria-label="5 star review"
-                              role="img"
-                            >
-                              <span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span>
-                            </span>
-                            <span
-                              class="jdgm-rev__timestamp"
-                              data-content="2019-03-19 03:07:41 UTC"
-                              >03/19/2019</span
-                            >
-                            <div class="jdgm-rev__br"></div>
-                            <span class="jdgm-rev__buyer-badge-wrapper"> </span>
-                            <span class="jdgm-rev__author-wrapper">
-                              <span class="jdgm-rev__author"
-                                >Humberto francisco</span
-                              >
-                              <span class="jdgm-rev__location"> </span>
-                            </span>
+                        <div class="review">
+                          <div class="review-header">
+                            <div class="review-avatar"> B </div>
+                            <div class="review-author">
+                              <div class="review-info">
+                                <div class="review-rating">
+                                  <span class="star-on">
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="star-on">
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="star-on">
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="star-on">
+                                    <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="star-off"></span>
+                                    <i class="fa-regular fa-star"></i>
+                                  </span>
+                              </div>
+                              <div class="review-timestamp">
+                                <span>14/02/2023</span> 
+                              </div>
+                              </div>
+                            <div class="review-author-name">Berk Özkan</div>
+                            </div>
+                            
                           </div>
-                          <div class="jdgm-rev__content">
-                            <div class="jdgm-rev__custom-form"></div>
-                            <b class="jdgm-rev__title">good</b>
-                            <div class="jdgm-rev__body"><p>good</p></div>
-                            <div class="jdgm-rev__pics"></div>
-                            <div class="jdgm-rev__vids"></div>
+                          <div class="review-body">
+                            <div class="review-title">Başarılı</div>
+                            <div class="review-message">Gerçekten kullanışlı bir ürün, tavsiye ederim.</div>
                           </div>
-                          <div class="jdgm-rev__actions">
-                            <div class="jdgm-rev__social"></div>
-                            <div class="jdgm-rev__votes"></div>
-                          </div>
-                          <div class="jdgm-rev__reply"></div>
-                        </div>
-                        <div
-                          class="jdgm-rev jdgm-divider-top jdgm--done-setup"
-                          data-verified-buyer="false"
-                          data-review-id="464f4b3e-53df-4099-a10f-1bd9610a687f"
-                          data-product-title="Basic Swear Shirt"
-                          data-product-url="/products/basic-swear-shirt"
-                          data-thumb-up-count="0"
-                          data-thumb-down-count="0"
-                        >
-                          <div class="jdgm-rev__header">
-                            <div class="jdgm-rev__icon">n</div>
-                            <span
-                              class="jdgm-rev__rating"
-                              data-score="5"
-                              tabindex="0"
-                              aria-label="5 star review"
-                              role="img"
-                            >
-                              <span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span
-                              ><span class="jdgm-star jdgm--on"></span>
-                            </span>
-                            <span
-                              class="jdgm-rev__timestamp"
-                              data-content="2019-03-19 02:50:57 UTC"
-                              >03/19/2019</span
-                            >
-                            <div class="jdgm-rev__br"></div>
-                            <span class="jdgm-rev__buyer-badge-wrapper"> </span>
-                            <span class="jdgm-rev__author-wrapper">
-                              <span class="jdgm-rev__author">ngo van kien</span>
-                              <span class="jdgm-rev__location"> </span>
-                            </span>
-                          </div>
-                          <div class="jdgm-rev__content">
-                            <div class="jdgm-rev__custom-form"></div>
-                            <b class="jdgm-rev__title">tetete</b>
-                            <div class="jdgm-rev__body"><p>adada</p></div>
-                            <div class="jdgm-rev__pics"></div>
-                            <div class="jdgm-rev__vids"></div>
-                          </div>
-                          <div class="jdgm-rev__actions">
-                            <div class="jdgm-rev__social"></div>
-                            <div class="jdgm-rev__votes"></div>
-                          </div>
-                          <div class="jdgm-rev__reply"></div>
                         </div>
                       </div>
-                      <div
-                        class="jdgm-paginate"
-                        data-per-page="5"
-                        data-url="https://judge.me/reviews/reviews_for_widget"
-                      ></div>
-                    </div>
-                    <div class="jdgm-rev-widg__paginate-spinner-wrapper">
-                      <div class="jdgm-spinner"></div>
                     </div>
                   </div>
                 </div>
@@ -1505,7 +1045,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <h6 class="sp-title">Have a question?</h6>
+              <h6 class="sp-title">Bir sorunuz mu var?</h6>
               <div class="contact-form">
                 <form
                   method="post"
@@ -1539,12 +1079,12 @@
                           name="contact[body]"
                           class="form-control"
                           rows="8"
-                          placeholder="Your Message"
+                          placeholder="Mesajınız"
                           id="textareaMessage"
                           required=""
                           autocomplete="off"
                           onfocus="this.placeholder=''"
-                          onblur="this.placeholder='Your Message'"
+                          onblur="this.placeholder='Mesajınız'"
                         ></textarea>
                       </div>
                       <div class="form-group">
@@ -1554,11 +1094,11 @@
                           value=""
                           class="form-control"
                           id="inputName"
-                          placeholder="Your Name"
+                          placeholder="Adınız"
                           required=""
                           autocomplete="off"
                           onfocus="this.placeholder=''"
-                          onblur="this.placeholder='Your Name'"
+                          onblur="this.placeholder='Adınız'"
                         />
                       </div>
                       <div class="form-group">
@@ -1570,11 +1110,11 @@
                           value=""
                           class="form-control"
                           id="inputEmail"
-                          placeholder="Your Email"
+                          placeholder="E-posta adresiniz"
                           required=""
                           autocomplete="off"
                           onfocus="this.placeholder=''"
-                          onblur="this.placeholder='Your Email'"
+                          onblur="this.placeholder='E-posta adresiniz'"
                         />
                       </div>
                       <div class="form-group">
@@ -1585,16 +1125,16 @@
                           value=""
                           class="form-control"
                           id="inputSubject"
-                          placeholder="Your Phone"
+                          placeholder="Telefon numaranız"
                           required=""
                           autocomplete="off"
                           onfocus="this.placeholder=''"
-                          onblur="this.placeholder='Your Phone'"
+                          onblur="this.placeholder='Telefon numaranız'"
                         />
                       </div>
                     </div>
                   </div>
-                  <button type="submit" class="btn">SEND MESSAGE</button>
+                  <button type="submit" class="btn">MESAJ GÖNDER</button>
                 </form>
               </div>
             </div>
@@ -1665,5 +1205,6 @@
     ></script>
     <script src="../assets/js/js-image-zoom.js"></script>
     <script src="../assets/js/app.js"></script>
+    <script src="../assets//js/collections.js"></script>
   </body>
 </html>
